@@ -1,0 +1,8 @@
+.post{
+    ul{
+        @extend .list;
+        li{
+            @extend .list-item;
+        }
+    }
+}
