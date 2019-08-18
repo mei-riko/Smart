@@ -1,44 +1,26 @@
 .header-block{
-    background: #eaeaea;
-    padding: 90px 0;
+    background: $light-grey url("/img/bg-header.jpg") no-repeat center / cover;
+    padding: 60px 0;
 
     &__title{
-        margin-bottom: 60px;
+        color: $black;
+        width: 920px;
+        max-width: 100%;
+        margin: 0 auto 30px;
     }
     &__content{
-        margin-bottom: 60px;
-
-        .list + .btn-group{
-            margin-top: 30px;
-        } 
-    }
-    &__info{
-        margin-bottom: 0;
-    }
-    &__img{
-        max-width: 100%;
-        width: 600px;
-        position: absolute;
-        bottom: -90px;
-        left: -20px;
-    }
-
-    /* For error page */
-    &_error{
-        background: $dark-red url('/img/404.jpg') no-repeat center / cover;
-        color: $white;
-
-        .header-block__title{
-            font-size: 4rem;
-            font-weight: 700;
+        margin-bottom: 30px;
+        &.icon-block{
+            width: 1120px;
+            max-width: 100%;
+            margin: 0 auto 30px;
         }
-        .header-block__info{
-            width: 550px;
+        .icon-block__offer{
+            width: 180px;
             max-width: 100%;
         }
     }
-    /* For catalog */
-    &_catalog{
-        padding: 70px 0;
+    /* For error page */
+    &_error{
     }
 }

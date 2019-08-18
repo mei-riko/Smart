@@ -1,6 +1,7 @@
 .list{
     list-style: none;
     padding-left: 0;
+    margin-block: 0;
     &-item{
         position: relative;
         padding-left: 1.25rem;
@@ -8,18 +9,28 @@
         &:before{
             content: '';
             display: block;
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             border-radius: 100%;
-            background: $red;
+            background: $green;
 
             position: absolute;
             left:0;
-            top:calc(50% - 2px);
+            top:calc(50% - 4px);
         }
 
         & + .list-item{
             margin-top: .5rem;
         }
+    }
+}
+
+.list-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .list{
+        padding: 0 20px;
     }
 }

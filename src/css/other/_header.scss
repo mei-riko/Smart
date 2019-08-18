@@ -1,1 +1,51 @@
-.header{}
+.header{
+    &_sticky{
+        position: sticky;
+        top: 0;
+        background: $white;
+        z-index: 101;
+    }
+    &__additional{
+        position: relative;
+        z-index: 1;
+        background: $light-grey;
+        letter-spacing: 1px;
+        color: $dark-grey;
+
+        padding: 10px 0;
+    }
+    &__main{
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .header__logo{
+        width: 230px;
+        height: 32px;
+    }
+    .header__contact{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        .item + .item{
+            margin-left: 30px;
+        }
+    }
+    .header__link{
+        &_inverse{
+            color: $link-hover-color;
+            &:hover{
+                color: $dark-grey;
+            }
+        }
+        &_phone{
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}

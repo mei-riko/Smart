@@ -1,51 +1,41 @@
 .content{
-    padding: 70px 0;
-    &.pb-10{
-        padding-bottom: 10px;
-    }
-    &.pb-0{
-        padding-bottom: 0px;
-    }
-    /* Background&Border */
+    padding: 60px 0;
+    &.pt-60{padding-top: 60px;}
+    &.pt-30{padding-top: 30px;}
+    &.pt-0{padding-top: 0px;}
+    &.pb-60{padding-bottom: 60px;}
+    &.pb-30{padding-bottom: 30px;}
+    &.pb-0{padding-bottom: 0px;}
+    /* Background & Border */
     &_bg-grey{
         background: $light-grey;
     }
-    &_bb-grey{
-        border-bottom: 1px solid #c5c5c5;
-    }
     /* Elements */
     .content__title{
-        margin-bottom: 70px;
-        &.mb-40{
-            margin-bottom: 40px;            
+        margin-bottom: 60px;
+        &.mb-30{
+            margin-bottom: 30px;            
         }
     }
     .content__maps{
         max-width: 100%;
     }
 }
-.bb-grey{
-    border-bottom: 1px solid #c5c5c5;
-}
+.element{
+    &_ellips{
+        width: 200px;
+        height: 200px;
 
-.content-navigation{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    overflow: auto;
-    &__item{
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 1.5em .5em;
-        color: $grey;
+        position: absolute;
+        top: -80px;
+        left: 30px;
+    }
+    &_square{
+        width: 150px;
+        height: 150px;
 
-        &--active{
-            color: $red;
-        }
-
-        &:hover{
-            text-decoration: none;
-        }
+        position: absolute;
+        bottom: -80px;
+        right: 120px;
     }
 }

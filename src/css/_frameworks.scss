@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/css/fonts/Gilroy-Light.eot');
+    src: url('/css/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+    url('/css/fonts/Gilroy-Light.woff') format('woff'),
+    url('/css/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/css/fonts/Gilroy-ExtraBold.eot');
+    src: url('/css/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/css/fonts/Gilroy-ExtraBold.woff') format('woff'),
+    url('/css/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 html,body {
     font-size: 14px;
     line-height: 1.5;
@@ -19,12 +37,12 @@ h1, h2, h3, h4, h5, h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
     margin-top: 1.5rem;
 }
-.h1,h1{font-size: 2.25rem;}
-.h2,h2{font-size: 2rem;}
-.h3,h3{font-size: 1.75rem;}
-.h4,h4{font-size: 1.5rem;}
-.h5,h5{font-size: 1.25rem;}
-.h6,h6{font-size: 1rem;}
+.h1,h1{font-size: 2.75rem;}
+.h2,h2{font-size: 2.5rem;}
+.h3,h3{font-size: 2rem;}
+.h4,h4{font-size: 1.75rem;}
+.h5,h5{font-size: 1.5rem;}
+.h6,h6{font-size: 1.25rem;}
 
 p {
     font-size: 1rem;
@@ -34,7 +52,7 @@ p {
         font-size: .9em;
     }
     &.lead{
-        font-size: 1.15em;
+        font-size: 1.25em;
     }
 }
 ol, ul{
@@ -135,15 +153,18 @@ a{
 }
 
 .mt-0{margin-top: 0px;}
-.mt-40{margin-top: 40px;}
-.mt-70{margin-top: 70px;}
+.mt-30{margin-top: 30px;}
+.mt-60{margin-top: 60px;}
 .mb-0{margin-bottom: 0px;}
-.mb-40{margin-bottom: 40px;}
-.mb-70{margin-bottom: 70px;}
+.mb-30{margin-bottom: 30px;}
+.mb-60{margin-bottom: 60px;}
 
+.pt-0{padding-top: 0px;}
+.pt-30{padding-top: 30px;}
+.pt-60{padding-top: 60px;}
 .pb-0{padding-bottom: 0px;}
-.pb-40{padding-bottom: 40px;}
-.pb-70{padding-bottom: 70px;}
+.pb-30{padding-bottom: 30px;}
+.pb-60{padding-bottom: 60px;}
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){}

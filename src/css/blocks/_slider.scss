@@ -1,1 +1,34 @@
-.slider{}
+.slider{
+    .slick-slide{
+        height: auto;
+        outline: none;
+        &:hover, &:focus{
+            outline: none;
+        }
+    }
+
+    &_license{
+        .slider-item{
+            .img-fluid{
+                width: 180px; 
+            }
+        }
+    }
+}
+
+.slider-numeric{
+    margin-top: -30px;
+    margin-bottom: 15px;
+    
+    position: relative;
+    z-index: 11;
+
+    &_license{
+        width: 180px; 
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        color: $white;
+    }
+}

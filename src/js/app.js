@@ -37,59 +37,20 @@ $(document).ready(() =>{
     });
 
     // Index Slider
-    if( $('.slider-block .slider-block__content').length > 0 ){
-        $('.slider-block .slider-block__content').slick({
-            slidesToShow: 4,
-            variableWidth: true
+    if( $('.slider_license').length > 0 ){
+        let $status = $('.slider-numeric');
+        let $slickElement = $('.slider_license');
+    
+        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $status.text(i + '/' + slick.slideCount);
         });
-    }
-    // Brand Slider
-    if( $('.slider-brand').length > 0 ){
-        $('.slider-brand').slick({
-            slidesToShow: 5,
-            centerMode: true,
-            variableWidth: true,
-            prevArrow: '<svg class="slick-prev slick-prev_svg" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve"><path fill="#C5C5C5" d="M28.7,2.2c14.4,0,26,11.6,26,26s-11.6,26-26,26s-26-11.6-26-26S14.3,2.2,28.7,2.2z"/><g><polygon fill="#FFF" points="35.2,15.5 33.3,13.5 18.2,28.2 33.3,42.9 35.2,40.9 22.1,28.2 		"/></g></svg>',
-            nextArrow: '<svg class="slick-next slick-next_svg" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve"><path fill="#c5c5c5" d="M28.7,54.2c-14.4,0-26-11.6-26-26s11.6-26,26-26s26,11.6,26,26S43.1,54.2,28.7,54.2z"/><g><polygon fill="#FFFFFF" points="22.2,40.9 24.1,42.9 39.2,28.2 24.1,13.5 22.2,15.5 35.3,28.2 		"/></g></svg>'
-        });
-    }
-    // Masonry
-    if( $('.post-row').length > 0 ){
-        $('.post-row').masonry({
-            // указываем класс элемента являющегося блоком в нашей сетке
-            itemSelector: '.post-col',
-            // true - если у вас все блоки одинаковой ширины
-            singleMode: true,
-            // перестраивает блоки при изменении размеров окна
-            isResizable: true,
-            // анимируем перестроение блоков
-            isAnimated: true,
-            // опции анимации - очередь и продолжительность анимации
-            animationOptions: { 
-                queue: false, 
-                duration: 500 
-            }
-        });
-    }
-
-    // Post Slider
-    if( $('.slider-for').length > 0 ){
-        $('.slider-for').slick({
+        $slickElement.slick({
             slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true,
-            prevArrow: '<svg class="slick-prev slick-prev_svg" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve"><path fill="#323232" d="M28.7,2.2c14.4,0,26,11.6,26,26s-11.6,26-26,26s-26-11.6-26-26S14.3,2.2,28.7,2.2z"/><g><polygon fill="#FFF" points="35.2,15.5 33.3,13.5 18.2,28.2 33.3,42.9 35.2,40.9 22.1,28.2 		"/></g></svg>',
-            nextArrow: '<svg class="slick-next slick-next_svg" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve"><path fill="#323232" d="M28.7,54.2c-14.4,0-26-11.6-26-26s11.6-26,26-26s26,11.6,26,26S43.1,54.2,28.7,54.2z"/><g><polygon fill="#FFFFFF" points="22.2,40.9 24.1,42.9 39.2,28.2 24.1,13.5 22.2,15.5 35.3,28.2 		"/></g></svg>'
+            autoplay: true,
+            autoplaySpeed: 5000,
+            arrows: false
         });
     }
 });
