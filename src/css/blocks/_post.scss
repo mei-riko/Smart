@@ -1,1 +1,52 @@
-.post{}
+.post{
+
+    &_category{
+        margin-top: 60px;
+        text-align: center;
+    
+        .post__image{
+            padding: 12px;
+            border: 1px solid #e6d9ef;
+            border-radius: 100%;
+    
+            display: inline-block;
+            margin: 0 auto 20px;
+        }
+    }
+
+    &_type-study{
+        .post__title{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 30px;
+            border: 1px solid $light-grey;
+            border-bottom: none;
+
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+
+            .btn{
+                padding: 6px 12px;
+            }
+
+            &_priority{
+                background: #ecf7f4;
+            }
+            &_default{
+                background: #eee5f4;
+            }
+        }
+        .post__offer{
+            padding: 30px;
+            border: 1px solid $light-grey;
+            border-top: none;
+
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+    }
+
+}

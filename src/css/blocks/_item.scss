@@ -88,7 +88,7 @@
         position: absolute;
         top: 24px;
 
-        z-index: -1;
+        z-index: 0;
     }
     &_col-3{
         &:before{
@@ -96,11 +96,27 @@
             left: 15%;
         }
     }
+    &_col-4{
+        &:before{
+            width: 76%;
+            left: 12%;
+        }
+    }
+
+    &_inverse{
+        &::before{
+            background: #462c58;
+        }
+    }
     .item{
+        position: relative;
+        z-index: 1;
         &__number{
             width: 48px;
             height: 48px;
             line-height: 48px;
+
+            color: $black;
 
             font-size: 16px;
             font-weight: 700;
@@ -108,6 +124,11 @@
             margin: 0 auto 15px;
 
             background: url("/img/bg-icon_light.svg") no-repeat center / contain;
+            
+            .icon-check {
+                width: 14px;
+                margin: 18px auto 0;
+            }
         }
         &__title{
             margin-bottom: 10px;

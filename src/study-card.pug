@@ -27,7 +27,29 @@ html(lang="ru")
                                 .title 4.7 из 5
                                 .offer 429 человек уже прошли обучение
                         .col-6
-                            img.img-fluid(src="/img/test-page.png")
+                            //- img.img-fluid.clip-svg(src="/img/test-page.png")
+                            <svg viewbox="0 0 680 540" preserveAspectRatio="xMidYMid meet">
+                                <defs>
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_0">
+                                        <feOffset in="SourceAlpha" dx="0" dy="23" />
+                                        <feGaussianBlur result="blurOut" stdDeviation="0" />
+                                        <feFlood flood-color="rgb(242, 240, 244)" result="floodOut" />
+                                        <feComposite operator="atop" in="floodOut" in2="blurOut" />
+                                        <feComponentTransfer><feFuncA type="linear" slope="1"/></feComponentTransfer>
+                                        <feMerge>
+                                            <feMergeNode/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                    <pattern id="image" patternUnits="userSpaceOnUse" height="595" width="690">
+                                        <image x="0" y="-20" height="595" width="690" xlink:href="/img/test-page.png"></image>
+                                    </pattern>
+                                </defs>
+                                <g filter="url(#Filter_0)">
+                                
+                                    <path fill-rule="evenodd"  fill="url(#image)" d="M380.054,18.985 C356.575,33.051 343.816,60.226 320.556,74.698 C299.158,88.016 272.465,89.730 247.477,89.645 C196.881,89.471 138.054,68.976 122.866,133.072 C112.521,176.716 172.280,204.548 157.683,246.568 C153.129,259.694 138.967,269.403 127.338,277.594 C98.447,297.938 76.938,315.421 55.551,344.330 C15.504,398.427 12.662,423.629 26.664,457.693 C41.848,494.625 98.621,529.291 145.735,511.969 C202.254,491.198 196.904,476.862 259.789,453.909 C312.860,434.527 383.661,472.440 421.000,485.000 C508.270,514.358 607.281,512.484 659.000,310.999 C670.470,266.337 677.417,219.454 666.602,151.475 C659.000,103.687 604.456,107.727 582.553,115.498 C504.168,143.335 444.937,-19.888 380.054,18.985 Z"/>
+                                </g>
+                            </svg>
             section
                 .container
                     .cta-block.cta-block_card
@@ -42,6 +64,155 @@ html(lang="ru")
                                 p.text-grey.mb-0 стоимость обучения
                             .cta-block__btn
                                 a.btn.btn_cta.text-bold(href="#") Записаться на курс
+            section.content
+                .container
+                    h2.h3.text-center.text-bold Пожарно-технический минимум
+                    p.content__offer.text-center Мы чудесные и распрекрасные, любите нас все. Мы чудесные и распрекрасные, любите нас все. Мы чудесные и распрекрасные, любите нас все. 
+                    .row
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-1.png")
+                                .post__title Пожарно-технический минимум для&nbsp;руководителей и ответственных за пожарную безопасность
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-2.png")
+                                .post__title Пожарно-технический минимум для&nbsp;электрогазосварщиков
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-3.png")
+                                .post__title Пожарно-технический минимум для&nbsp;киномехаников
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-4.png")
+                                .post__title  Пожарно-технический минимум для&nbsp;рабочих, осуществляющих пожароопасные работы
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-5.png")
+                                .post__title Пожарно-технический минимум для&nbsp;сотрудников, осуществляющих круглосуточную 
+                                    | охрану организаций, и&nbsp;руководителей подразделений организаций
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-6.png")
+                                .post__title Пожарно-техническому минимум для&nbsp;механизаторов, рабочих и&nbsp;служащих сельскохозяйственных объектов 
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-7.png")
+                                .post__title Пожарно-технический минимум для&nbsp;ответственных за&nbsp;пожарную безопасность на вновь строящихся и реконструируемых объектах
+                        .col-3
+                            .post.post_category
+                                .post__image
+                                    img.img-fluid(src="/img/post-8.png")
+                                .post__title Пожарно-технический минимум для&nbsp;воспитателей дошкольных учреждений
+                        .col-12.mt-60.text-center
+                            a.text-bold(href="#") Не нашли свое направление? Посмотрите здесь!
+            section.content.content_bg-grey
+                .container
+                    .row.justify-content-center
+                        .col-4.text-right
+                            a.btn.btn_modal.text-bold(href="#") Кто может пройти обучение
+                        .col-4.text-center
+                            a.btn.btn_modal.text-bold(href="#") На какой срок выдается удостоверение
+                        .col-4
+                            a.btn.btn_modal.text-bold(href="#") Периодичность обучения
+            section.content
+                .container
+                    p.h3.text-center.text-bold.mb-30 Форматы обучения
+                    .row.justify-content-center
+                        .col-5.d-flex
+                            .post.post_type-study
+                                .post__title.post__title_priority
+                                    p.text-bold.mb-0 Дистанционное обучение
+                                    a.btn.btn_cta(href="#") Записаться
+                                .post__offer
+                                    p Обучение проходит на образовательной платформе, доступной из любой точки России. 
+                                        | Вам будут выслан логин и пароль. Необходимо будет ознакомиться с теоритической 
+                                        | частью и пройти тестирование. 
+                                    p.post__price.h4.text-bold.mb-0 1500 руб.
+                        .col-5.d-flex
+                            .post.post_type-study
+                                .post__title.post__title_default
+                                    p.text-bold.mb-0 Очное обучение
+                                    a.btn.btn_cta(href="#") Записаться
+                                .post__offer 
+                                    p Обучение проходит на образовательной платформе, доступной из любой точки России. 
+                                        | Вам будут выслан логин и пароль. Необходимо будет ознакомиться с теоритической 
+                                        | частью и пройти тестирование. 
+                                    p.post__price.h4.text-bold.mb-0 2500 руб.
+            section.content.content_bg-violet.p-90
+                .container
+                    p.h1.text-center.text-bold.mb-60  Всего 3 простых шага до Вашей цели
+                    .row.justify-content-center.mb-60
+                        .col-10.item-row.item-row_inverse.item-row_col-4
+                            .item.item_work-step.text-center
+                                p.item__number 1
+                                p.item__title.text-bold Подача заявки
+                                p.item__content.text-small Помощь с&nbsp;оформлением резюме и&nbsp;полный доступ к&nbsp;базе вакансий
+                            .item.item_work-step.text-center
+                                p.item__number 2
+                                p.item__title.text-bold Договор и доступ
+                                p.item__content.text-small Официальный договор, на&nbsp;основе которого предоставляется доступ к&nbsp;курсу
+                            .item.item_work-step.text-center
+                                p.item__number 3
+                                p.item__title.text-bold Курс и тест
+                                p.item__content.text-small Задания с&nbsp;проверкой и&nbsp;обратной связью от&nbsp;преподавателей и&nbsp;экспертов курса
+                            .item.item_work-step.text-center
+                                p.item__number.text-small 
+                                    svg.icon-check(x="0px" y="0px" viewBox="0 0 45.701 45.7")
+                                        path(fill="#000" d="M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z")
+                                p.item__title.text-bold Получите документы
+                                p.item__content.text-small По прохождении обучения вы получите удостоверение и&nbsp;протокол
+                    .row.justify-content-center
+                        .col-6
+                            img.mr-0.img-fluid.img-border(src="/img/doc-1.png", alt="")
+                        .col-6
+                            img.ml-0.img-fluid.img-border(src="/img/doc-2.png", alt="")
+            section.content.content_bg-grey.p-90
+                .container
+                    .row.align-items-center
+                        .col-7
+                            .slider.slider_license#study-slider
+                                .slider-item
+                                    img.img-fluid(src="/img/test-01.png")
+                                .slider-item
+                                    img.img-fluid(src="/img/test-02.png")
+                                .slider-item
+                                    img.img-fluid(src="/img/test-03.png")
+                                .slider-item
+                                    img.img-fluid(src="/img/test-04.jpg")
+                                .slider-item
+                                    img.img-fluid(src="/img/test-03.png")
+                        .col-4
+                            p.h4.text-bold Даём 100% гарантию
+                            p Мы осуществляем деятельнось на&nbsp;основе выданных лицензий, поэтому можем гарантировать  
+                                | прохождение всех надзорных проверок.
+                            p.mb-0 Все программы соответствуют госстандартам. По&nbsp;заверешнию обучения все данные 
+                                | заносятся в&nbsp;Реестр. 
+            section.content.p-90
+                .container
+                    .row.justify-content-center.mb-60
+                        .col-7
+                            p.h3.text-center.text-bold.mb-0 Популярные вопросы о «ПТМ»
+                    .row.justify-content-center
+                        .col-4.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Кому необходимо обучение?
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение всех надзорных проверок. Все программы соответствуют.
+                        .col-4.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Штрафы за&nbsp;отсутствие удостоверения
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение проверок. Все программы соответствуют госстандартам.
+                        .col-4.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Какая зарплата вас ждет?
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение всех проверок.
+        
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")

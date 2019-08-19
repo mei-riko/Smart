@@ -1,11 +1,13 @@
 .content{
     padding: 60px 0;
+    /* Offset */
     &.pt-60{padding-top: 60px;}
     &.pt-30{padding-top: 30px;}
     &.pt-0{padding-top: 0px;}
     &.pb-60{padding-bottom: 60px;}
     &.pb-30{padding-bottom: 30px;}
     &.pb-0{padding-bottom: 0px;}
+    &.p-90{padding: 90px 0;}
     /* Background & Border */
     &_bg-grey{
         background: $light-grey;
@@ -28,8 +30,10 @@
             margin-bottom: 30px;            
         }
     }
-    &.p-90{
-        padding: 90px 0;
+    .content__offer{
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 .element{

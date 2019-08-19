@@ -34,6 +34,15 @@
     &_check{
         padding: 20px;
     }
+    &_modal{
+        background: $white;
+        border: 6px solid #ebebeb;
+        color: $violet;
+        padding: 14px 20px;
+        &:hover{
+            color: $red;
+        }
+    }
 
     &.text-bold{
         letter-spacing: 1px;

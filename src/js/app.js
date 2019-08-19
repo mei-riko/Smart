@@ -39,17 +39,23 @@ $(document).ready(() =>{
     // Index Slider
     if( $('.slider_license').length > 0 ){
         let $status = $('.slider-numeric');
-        let $slickElement = $('.slider_license');
+        let $slickElementIndex = $('.slider_license#index-slider');
     
-        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        $slickElementIndex.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
             var i = (currentSlide ? currentSlide : 0) + 1;
             $status.text(i + '/' + slick.slideCount);
         });
-        $slickElement.slick({
+        $slickElementIndex.slick({
             slidesToShow: 1,
             autoplay: true,
             autoplaySpeed: 5000,
+            arrows: false
+        });
+
+        let $slickElementStudy = $('.slider_license#study-slider');
+        $slickElementStudy.slick({
+            slidesToShow: 4,
             arrows: false
         });
     }

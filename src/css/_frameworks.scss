@@ -93,6 +93,10 @@ a{
     max-width: 100%;
 }
 
+.img-border{
+    border: 4px solid #655d6a;
+}
+
 .breadcrumbs{
     list-style: none;
     padding: 0;
@@ -163,6 +167,8 @@ a{
 .mb-20{margin-bottom: 20px;}
 .mb-30{margin-bottom: 30px;}
 .mb-60{margin-bottom: 60px;}
+.mr-0{margin-right: 0}
+.ml-0{margin-left: 0}
 
 .pt-0{padding-top: 0px;}
 .pt-30{padding-top: 30px;}
