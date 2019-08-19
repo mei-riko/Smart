@@ -10,6 +10,17 @@
     &_bg-grey{
         background: $light-grey;
     }
+    &_bg-violet{
+        background: $violet;
+        color: $white;
+        
+        .form__agree{
+            color: $light-grey;
+            .checkbox__link{
+                color: $white;
+            }
+        }
+    }
     /* Elements */
     .content__title{
         margin-bottom: 60px;

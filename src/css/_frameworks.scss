@@ -72,6 +72,8 @@ a{
 .p-relative{position: relative;}
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101; background: $white;}
 
+.d-flex{display: flex;}
+
 .text-white{color: $white;}
 .text-black{color: $black;}
 .text-grey{color: $grey;}
@@ -101,13 +103,15 @@ a{
     flex-wrap: wrap;
 
     .breadcrumbs__item{
+        padding: 10px 4px;
         color: $grey;
-        &_sep{
-            margin: 0 8px;
-        }
     }
     .breadcrumbs__link{
         text-decoration: underline;
+    }
+
+    &-section{
+        background: $light-grey;
     }
 }
 .pagination{
