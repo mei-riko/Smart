@@ -13,44 +13,35 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
         main
-            section.header-block
+            section.header-block.header-block_study
                 .container
-                    h1.header-block__title.text-center.text-bold Получите законные разрешительные документы со скидкой до 30%
-                    .header-block__content.icon-block.icon-block_inline
-                        .icon-block__item
-                            .icon.icon_security-white
-                            .icon-block__offer 100% гарантия результата
-                        .icon-block__item
-                            .icon.icon_badge-white
-                            .icon-block__offer европейский уровень сервиса
-                        .icon-block__item
-                            .icon.icon_archives-white
-                            .icon-block__offer бесплатная доставка документов
-                        .icon-block__item
-                            .icon.icon_clipboard-white
-                            .icon-block__offer прохождение всех проверок
-                    p.lead.text-bold.text-center Принцип «Единого окна» — получите все необходимые документы и консультации у нас
-                    .nav.nav_button
-                        .nav__item
-                            a.nav__link(href="#") Повышение квалификации
-                        .nav__item
-                            a.nav__link(href="#") Профпереподготовка
-                        .nav__item
-                            a.nav__link(href="#") Первая помощь
-                        .nav__item
-                            a.nav__link(href="#") Рабочие специальности
-                        .nav__item
-                            a.nav__link(href="#") Охрана труда
-                        .nav__item
-                            a.nav__link(href="#") Целевое обучение
-                        .nav__item
-                            a.nav__link(href="#") Электробезопасность
-                        .nav__item
-                            a.nav__link(href="#") Промышленная безопасность
-                        .nav__item
-                            a.nav__link(href="#") Охрана труда на высоте
-                        .nav__item
-                            a.nav__link(href="#") Пожарно-технический минимум
+                    .row.align-items-center
+                        .col-6
+                            h1.text-bold.header-block__title Пожарно-технический минимум без&nbsp;отрыва от&nbsp;работы
+                            ul.list
+                                li.list-item 100% гарантия результата
+                                li.list-item получение официальной лицензии
+                                li.list-item европейский уровень сервиса
+                                li.list-item персональный менеджер
+                            .header-block__rating.mt-60
+                                .title 4.7 из 5
+                                .offer 429 человек уже прошли обучение
+                        .col-6
+                            img.img-fluid(src="/img/test-page.png")
+            section
+                .container
+                    .cta-block.cta-block_card
+                        p.cta-block__title.h3.text-bold Получите документы быстро и легко 
+                        .cta-block__row
+                            ul.list-clean
+                                li.list-item — удостоверение ПТМ на 1-3 года (с внесением в реестр)
+                                li.list-item — выписка из протокола
+                                li.list-item — сроки оформления удостоверения - 1 день
+                            .cta-block__price
+                                p.text-bold.h4 1500 руб.
+                                p.text-grey.mb-0 стоимость обучения
+                            .cta-block__btn
+                                a.btn.btn_cta.text-bold(href="#") Записаться на курс
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")

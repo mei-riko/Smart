@@ -64,4 +64,15 @@
             padding-top: 0px;
         }
     }
+
+    &_card{
+        border-radius: 6px;
+        padding: 40px;
+
+        .cta-block__title{
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #462c58;
+        }
+    }
 }

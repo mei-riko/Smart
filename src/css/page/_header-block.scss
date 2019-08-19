@@ -20,6 +20,17 @@
             max-width: 100%;
         }
     }
+    &__rating{
+        .title{
+            padding-left: 40px;
+            background: url("/img/star.svg") no-repeat left center / 30px;
+            @extend .h4;
+            @extend .text-bold;
+        }
+        .offer{
+            color: $grey;
+        }
+    }
     /* For index page */
     &_index{
         background: $light-grey url("/img/bg-header.jpg") no-repeat center / cover;
@@ -44,7 +55,10 @@
             color: $red;
         }
     }
-
+    /* For study page*/
+    &_study{
+        background: $white;
+    }
 
     .list{
         &-item{

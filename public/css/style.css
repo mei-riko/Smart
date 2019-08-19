@@ -359,14 +359,14 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .header-block__rating .title, .h5, .h6 {
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
-* + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+* + .h1, * + .h2, * + .h3, * + .h4, .header-block__rating * + .title, * + .h5, * + .h6 {
   margin-top: 1.5rem;
 }
 
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6,
   font-size: 2rem;
 }
 
-.h4, h4 {
+.h4, .header-block__rating .title, h4 {
   font-size: 1.75rem;
 }
 
@@ -461,7 +461,7 @@ a:hover, a:focus {
   text-transform: uppercase;
 }
 
-.text-bold, strong, b {
+.text-bold, .header-block__rating .title, strong, b {
   font-weight: 700;
 }
 
@@ -1214,12 +1214,12 @@ a:hover, a:focus {
   margin-bottom: 0;
 }
 
-.list-item {
+.list .list-item {
   position: relative;
   padding-left: 1.25rem;
 }
 
-.list-item:before {
+.list .list-item:before {
   content: '';
   display: block;
   width: 8px;
@@ -1231,7 +1231,7 @@ a:hover, a:focus {
   top: calc(50% - 4px);
 }
 
-.list-item + .list-item {
+.list .list-item + .list-item {
   margin-top: .5rem;
 }
 
@@ -1248,6 +1248,12 @@ a:hover, a:focus {
 
 .list-group .list {
   padding: 0 20px;
+}
+
+.list-clean {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .form {
@@ -1379,7 +1385,7 @@ a:hover, a:focus {
   padding: 20px;
 }
 
-.btn.text-bold {
+.btn.text-bold, .header-block__rating .btn.title {
   letter-spacing: 1px;
 }
 
@@ -1797,11 +1803,23 @@ a:hover, a:focus {
   padding-top: 0px;
 }
 
+.cta-block_card {
+  border-radius: 6px;
+  padding: 40px;
+}
+
+.cta-block_card .cta-block__title {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #462c58;
+}
+
 .header-block {
   background: #f3f3f3;
   padding: 30px 0;
   /* For index page */
   /* For error page */
+  /* For study page*/
 }
 
 .header-block__title {
@@ -1824,6 +1842,15 @@ a:hover, a:focus {
 .header-block__content .icon-block__offer {
   width: 180px;
   max-width: 100%;
+}
+
+.header-block__rating .title {
+  padding-left: 40px;
+  background: url("/img/star.svg") no-repeat left center/30px;
+}
+
+.header-block__rating .offer {
+  color: #56585a;
 }
 
 .header-block_index {
@@ -1851,6 +1878,10 @@ a:hover, a:focus {
 
 .header-block_error .link {
   color: #ef081e;
+}
+
+.header-block_study {
+  background: #ffffff;
 }
 
 .header-block .list-item:before {

@@ -3,7 +3,7 @@
     padding-left: 0;
     margin-bottom: 0;
 
-    &-item{
+    .list-item{
         position: relative;
         padding-left: 1.25rem;
 
@@ -34,4 +34,10 @@
     .list{
         padding: 0 20px;
     }
+}
+
+.list-clean{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;    
 }
