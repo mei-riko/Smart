@@ -80,7 +80,7 @@ html(lang="ru")
                                 li.list-item работаем четко в соответствии со сроками
             section.content.content_bg-grey
                 .container
-                    .row.justify-content-center
+                    .row.justify-content-center.align-items-center
                         .col-4.p-relative
                             svg.element.element_ellips(viewbox="0 0 250 250" preserveAspectRatio="xMinYMid meet")
                                 defs
@@ -112,11 +112,63 @@ html(lang="ru")
                                         stop(offset="100%" stop-color="rgb(239,8,122)" stop-opacity="0")
                                 path(fill-rule="evenodd"  fill="rgb(239, 8, 30)" d="M-0.000,-0.000 L125.000,-0.000 L125.000,125.000 L-0.000,125.000 L-0.000,-0.000 Z")
                                 path(fill="url(#PSgrad_2)" d="M-0.000,-0.000 L125.000,-0.000 L125.000,125.000 L-0.000,125.000 L-0.000,-0.000 Z")
-            section.content
+            section.content.p-90
                 .container
                     .row.justify-content-center
                         .col-8
-                            h2.h1.text-center.text-bold Получите документы быстро и легко. Оставьте заявку!
+                            h2.h1.text-center.text-bold.mb-30 Получите документы быстро и легко. Оставьте заявку!
+                    .row.justify-content-center
+                        .col-5.text-center
+                            p.mb-30 Укажите свой контактный телефон, менеджер свяжется с&nbsp;вами 
+                                | и&nbsp;предложит выгодные условия сотрудничества.
+                    .row.justify-content-center
+                        .col-6
+                            form.form.form_inline(action="")
+                                .form__group
+                                    input.form__input.phone(placeholder="Телефон" type="tel")
+                                    a.btn.btn_red(href="#") Отправить
+                                .form__agree.checkbox
+                                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                    label.checkbox__label(for="agree") согласен с 
+                                        a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
+            section.maps
+                .container
+                    .row.justify-content-center
+                        .col-6.p-relative
+                            .maps-info
+                                p.h4.text-bold Нам доверяют клиенты по всей России
+                                p.mb-0 Выдано 230 лицензий, 300 сертификатов и&nbsp;2800 человек прошли обучение 
+                                    | в&nbsp;нашем учебном центре «Smart».
+                .maps-row
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8743924.557771841!2d35.99382630815788!3d57.6527840967887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2z0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2sua!4v1566195241271!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            section.content.p-90
+                .container
+                    p.h4.text-bold.text-center.mb-30 Новости учебного центра
+                    .row
+                        .col-4
+                            .news
+                                a.news__content(href="text.html")
+                                    p.mb-0 Утверждение порядка профилактических обследований на опасных производственных объектах
+                                .news__footer
+                                    .row
+                                        p.col-6.mb-0.text-small 10 августа 2019
+                                        p.col-6.mb-0.text-small.text-right новости проекта
+                        .col-4
+                            .news
+                                a.news__content(href="text.html")
+                                    p.mb-0 Утверждение порядка профилактических обследований на опасных производственных объектах
+                                .news__footer
+                                    .row
+                                        p.col-6.mb-0.text-small 10 августа 2019
+                                        p.col-6.mb-0.text-small.text-right новости проекта
+                        .col-4
+                            .news
+                                a.news__content(href="text.html")
+                                    p.mb-0 Утверждение порядка профилактических обследований на опасных производственных объектах
+                                .news__footer
+                                    .row
+                                        p.col-6.mb-0.text-small 10 августа 2019
+                                        p.col-6.mb-0.text-small.text-right новости проекта
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")

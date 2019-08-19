@@ -5,10 +5,18 @@
     
     font-size: 14px;
     line-height: 1em;
+    border-radius: 4px;
 
     transition: .3s;
 
+    padding: 20px 30px;
+
     &:hover, &:focus{
         text-decoration: none;
+    }
+
+    &_red{
+        background: $red;
+        color: $white;
     }
 }

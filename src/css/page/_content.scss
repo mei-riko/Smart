@@ -17,8 +17,8 @@
             margin-bottom: 30px;            
         }
     }
-    .content__maps{
-        max-width: 100%;
+    &.p-90{
+        padding: 90px 0;
     }
 }
 .element{
@@ -35,7 +35,23 @@
         height: 150px;
 
         position: absolute;
-        bottom: -80px;
-        right: 120px;
+        bottom: -120px;
+        right: -120px;
+    }
+}
+.maps{
+    padding-top: 30px;
+    &-info{
+        position: absolute;
+        top: -30px;
+        left: 0;
+        
+        padding: 20px;
+
+        background: $white;
+        border: 1px solid $light-grey;
+        border-radius: 4px;
+
+        text-align: center;
     }
 }
