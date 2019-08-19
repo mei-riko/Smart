@@ -1,0 +1,27 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            section.header-block.header-block_error
+                .container
+                    h1.header-block__title Упс! 404
+                    p.header-block__subtitle Страница перемещена или удалена
+                    p.mb-0 Запрашиваемая вами страница недоступна, но это не страшно. 
+                    | Вернитесь 
+                    a.link(href="#") на главную 
+                    |  и попробуйте ещё раз!
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js") 

@@ -14,7 +14,7 @@ html(lang="ru")
         include chunks/header.pug
 
         main
-            section.header-block
+            section.header-block.header-block_index
                 .container
                     h1.header-block__title.text-center.text-bold Получите законные разрешительные документы со скидкой до 30%
                     .header-block__content.icon-block.icon-block_inline
@@ -126,7 +126,7 @@ html(lang="ru")
                             form.form.form_inline(action="")
                                 .form__group
                                     input.form__input.phone(placeholder="Телефон" type="tel")
-                                    a.btn.btn_red(href="#") Отправить
+                                    a.btn.btn_cta(href="#") Отправить
                                 .form__agree.checkbox
                                     input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
                                     label.checkbox__label(for="agree") согласен с 

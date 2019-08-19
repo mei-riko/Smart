@@ -1,0 +1,57 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            section.header-block
+                .container
+                    h1.header-block__title.text-center.text-bold Получите законные разрешительные документы со скидкой до 30%
+                    .header-block__content.icon-block.icon-block_inline
+                        .icon-block__item
+                            .icon.icon_security-white
+                            .icon-block__offer 100% гарантия результата
+                        .icon-block__item
+                            .icon.icon_badge-white
+                            .icon-block__offer европейский уровень сервиса
+                        .icon-block__item
+                            .icon.icon_archives-white
+                            .icon-block__offer бесплатная доставка документов
+                        .icon-block__item
+                            .icon.icon_clipboard-white
+                            .icon-block__offer прохождение всех проверок
+                    p.lead.text-bold.text-center Принцип «Единого окна» — получите все необходимые документы и консультации у нас
+                    .nav.nav_button
+                        .nav__item
+                            a.nav__link(href="#") Повышение квалификации
+                        .nav__item
+                            a.nav__link(href="#") Профпереподготовка
+                        .nav__item
+                            a.nav__link(href="#") Первая помощь
+                        .nav__item
+                            a.nav__link(href="#") Рабочие специальности
+                        .nav__item
+                            a.nav__link(href="#") Охрана труда
+                        .nav__item
+                            a.nav__link(href="#") Целевое обучение
+                        .nav__item
+                            a.nav__link(href="#") Электробезопасность
+                        .nav__item
+                            a.nav__link(href="#") Промышленная безопасность
+                        .nav__item
+                            a.nav__link(href="#") Охрана труда на высоте
+                        .nav__item
+                            a.nav__link(href="#") Пожарно-технический минимум
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js") 

@@ -1,6 +1,6 @@
 .header-block{
-    background: $light-grey url("/img/bg-header.jpg") no-repeat center / cover;
-    padding: 60px 0;
+    background: $light-grey;
+    padding: 90px 0;
 
     &__title{
         color: $black;
@@ -20,7 +20,37 @@
             max-width: 100%;
         }
     }
+    /* For index page */
+    &_index{
+        background: $light-grey url("/img/bg-header.jpg") no-repeat center / cover;
+        padding: 60px 0;
+    }
     /* For error page */
     &_error{
+        background: $light-grey;
+        padding: 90px 0;
+        text-align: center;
+        .header-block__title{
+            color: $red;
+            font-size: 100px;
+            font-weight: 700;
+        }
+        .header-block__subtitle{
+            color: $violet;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .link{
+            color: $red;
+        }
+    }
+
+
+    .list{
+        &-item{
+            &:before{
+                background: $black;
+            }
+        }
     }
 }

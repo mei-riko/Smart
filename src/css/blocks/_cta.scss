@@ -1,0 +1,33 @@
+.cta-block{
+    background: $violet;
+    color: $white;
+    padding: 40px 0;
+
+    .cta-block__row{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cta-block__content{
+        position: relative;
+        flex: 0 0 720px;
+        max-width: 100%;
+        padding-left: 180px;
+    }
+    .cta-block__title{
+        margin-top: 0;
+        color: $white;
+    }
+    .cta-block__img{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("/img/bg-icon_white.svg") no-repeat center / contain;
+        .img-fluid{
+            width: 22px;
+        }
+        padding: 40px;
+    }
+}
