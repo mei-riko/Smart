@@ -25,7 +25,6 @@
         }
     }
 }
-
 .list-group{
     display: flex;
     flex-wrap: nowrap;
@@ -35,9 +34,21 @@
         padding: 0 20px;
     }
 }
-
 .list-clean{
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;    
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list-group{
+        justify-content: start;
+        flex-wrap: wrap;
+        .list{
+            padding: 0;
+            & + .list{
+                margin-top: .5rem;
+            }
+        }
+    }
 }

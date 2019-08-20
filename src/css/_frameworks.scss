@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'Gilroy';
-    src: url('/css/fonts/Gilroy-Light.eot');
-    src: url('/css/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
-    url('/css/fonts/Gilroy-Light.woff') format('woff'),
-    url('/css/fonts/Gilroy-Light.ttf') format('truetype');
+    src: url('/fonts/Gilroy-Light.eot');
+    src: url('/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Gilroy-Light.woff') format('woff'),
+    url('/fonts/Gilroy-Light.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/css/fonts/Gilroy-ExtraBold.eot');
-    src: url('/css/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('/css/fonts/Gilroy-ExtraBold.woff') format('woff'),
-    url('/css/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    src: url('/fonts/Gilroy-ExtraBold.eot');
+    src: url('/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Gilroy-ExtraBold.woff') format('woff'),
+    url('/fonts/Gilroy-ExtraBold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -73,6 +73,7 @@ a{
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101; background: $white;}
 
 .d-flex{display: flex;}
+.d-none{display: none;}
 
 .text-white{color: $white;}
 .text-black{color: $black;}
@@ -179,5 +180,22 @@ a{
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){}
-@media all and (max-width: map-get($grid-breakpoints, 'md')){}
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .d-md-none{display: none;}
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .d-sm-none{display: none;}
+    
+    .h1,h1{font-size: 1.75rem;}
+    .h2,h2{font-size: 1.75rem;}
+    .h3,h3{font-size: 1.5rem;}
+    .h4,h4{font-size: 1.5rem;}
+    .h5,h5{font-size: 1.25rem;}
+    .h6,h6{font-size: 1rem;}
+
+    .text-sm-left{text-align: left;}
+    .text-sm-center{text-align: center;}
+    .text-sm-right{text-align: right;}
+
+    .mt-sm-30{margin-top: 30px;}
+}

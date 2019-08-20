@@ -48,4 +48,118 @@
             }
         }
     }
+    .header__nav{
+        display: none;
+    }
+    .nav{
+        &_mobile{
+            display: none;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        .logo{
+            .path-offer{
+                display: none;
+            }
+        }
+        .header__link{
+            &_phone{
+                display: block;
+                font-size: 0;
+                width: 30px;
+                height: 30px;
+                background: url("/img/call-answer.svg") no-repeat center / 20px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        .logo{
+            width: 190px;
+            &-col{
+                overflow: hidden;
+            }
+            .path-offer{
+                display: block;
+            }
+        }
+        .nav{
+            display: none;
+            &_mobile{
+                padding: 20px;
+                border-bottom: 4px solid $light-grey;
+                .nav__title{
+                    display: block;
+                    color: $grey;
+                    margin-bottom: 10px;
+                }
+                .nav__item{
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    & + .nav__item{
+                        margin-top: 6px;
+                    }
+                }
+                .sep{
+                    width: 100%;
+                    height: 1px;
+                    background: $light-grey;
+                    margin: 10px 0;
+                }
+            }
+        }
+        .header__nav{
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin: 0;
+            margin-left: auto;
+            background: url("/img/menu.svg") no-repeat center / 22px;
+            cursor: pointer;
+        }
+        .header__link{
+            &_phone{
+                display: block;
+                font-size: 18px;
+                width: 100%;
+                height: auto;
+                background: none;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        &__additional{
+            .container{
+                padding: 0 20px;
+            }
+        }
+        &__main{
+            .container{
+                padding: 0 20px;
+            }
+        }
+        .logo{
+            .path-offer{
+                display: none;
+            }
+        }
+        .header__contact{
+            font-size: 12px;
+        }
+        .header__link{
+            &_phone{
+                display: block;
+                font-size: 0;
+                width: 30px;
+                height: 30px;
+                background: url("/img/call-answer.svg") no-repeat center / 20px;
+            }
+        }
+    }
 }

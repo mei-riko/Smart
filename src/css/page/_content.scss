@@ -70,3 +70,43 @@
         text-align: center;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .element{
+        &_square{
+            bottom: -150px;
+            right: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .element{
+        &_ellips{
+            top: -60px;
+            left: 0px;
+        }
+        &_square{
+            display: none;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content{
+        padding: 40px 0;
+        /* Offset */
+        &.pt-sm-30{padding-top: 30px;}
+        &.pt-sm-0{padding-top: 0px;}
+        &.pb-sm-30{padding-bottom: 30px;}
+        &.pb-sm-0{padding-bottom: 0px;}
+        &.p-sm-40{padding: 40px 0;}
+    }
+    .maps{
+        border-top: 1px solid $light-grey;
+        &-info{
+            position: unset;
+            top: 0;
+            left: 0;
+            padding: 0 0 40px;
+            border: none;
+        }
+    }
+}

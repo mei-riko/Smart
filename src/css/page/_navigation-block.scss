@@ -41,3 +41,22 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .navigation-block{
+        padding: 0;
+        .nav{
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            justify-content: start;
+            .nav__item{
+                white-space: nowrap;
+
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

@@ -39,6 +39,7 @@
     &_faq{
         position: relative;
         overflow: hidden;
+        cursor: pointer;
         &:before{
             display: block;
             content: '?';

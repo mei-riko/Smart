@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Basic Page</title>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
@@ -40,8 +41,8 @@
             </div>
             <div class="col-6">
               <div class="nav nav_header">
-                <div class="nav__item nav__item_has-child"><a class="nav__link" href="#">Обучение</a>
-                  <div class="nav__dropdown" style="display:none">
+                <div class="nav__item nav__item_has-child"><a class="nav__link" href="#" data-href="#study">Обучение</a>
+                  <div class="nav__dropdown" id="study" style="display:none">
                     <div class="nav__item"><a class="nav__link" href="#">Повышение квалификации</a></div>
                     <div class="nav__item"><a class="nav__link" href="#">Профпереподготовка</a></div>
                     <div class="nav__item"><a class="nav__link" href="#">Первая помощь</a></div>
@@ -54,8 +55,8 @@
                     <div class="nav__item"><a class="nav__link" href="#">Пожарно-технический минимум</a></div>
                   </div>
                 </div>
-                <div class="nav__item nav__item_has-child"><a class="nav__link" href="#">Услуги</a>
-                  <div class="nav__dropdown" style="display:none">
+                <div class="nav__item nav__item_has-child"><a class="nav__link" href="#" data-href="#service">Услуги</a>
+                  <div class="nav__dropdown" id="service" style="display:none">
                     <div class="nav__item"><a class="nav__link" href="#">Служба охраны труда</a></div>
                     <div class="nav__item"><a class="nav__link" href="#">Сертификация</a></div>
                     <div class="nav__item"><a class="nav__link" href="#">Лицензирование </a></div>
@@ -128,22 +129,31 @@
                 <p class="text-bold h4">1500 руб.</p>
                 <p class="text-grey mb-0">стоимость обучения</p>
               </div>
-              <div class="cta-block__btn"><a class="btn btn_cta text-bold" href="#">Записаться на курс</a></div>
+              <div class="cta-block__btn"><a class="btn btn_cta text-bold" data-fancybox="modal-1" data-src="#modalCall" href="javascript:;">Записаться на курс</a></div>
             </div>
           </div>
         </div>
       </section>
       <section class="content">
-        <div class="container">
+        <div class="container p-relative"><a class="modal-filter" data-fancybox="filter" data-src="#filterModal" href="javascript:;">Фильтр</a>
+          <div class="modal modal_filter" id="filterModal">
+            <ul>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+              <li>тест</li>
+            </ul>
+          </div>
           <h2 class="h3 text-center text-bold">Пожарно-технический минимум</h2>
           <p class="content__offer text-center">Мы чудесные и распрекрасные, любите нас все. Мы чудесные и распрекрасные, любите нас все. Мы чудесные и распрекрасные, любите нас все. </p>
           <div class="row">
-            <div class="col-3">
-              <div class="post post_category">
+            <div class="col-3"><a class="post post_category post_link" href="#">
                 <div class="post__image"><img class="img-fluid" src="/img/post-1.png"/></div>
-                <div class="post__title">Пожарно-технический минимум для&nbsp;руководителей и ответственных за пожарную безопасность</div>
-              </div>
-            </div>
+                <div class="post__title">Пожарно-технический минимум для&nbsp;руководителей и ответственных за пожарную безопасность</div></a></div>
             <div class="col-3">
               <div class="post post_category">
                 <div class="post__image"><img class="img-fluid" src="/img/post-2.png"/></div>
@@ -207,7 +217,7 @@
             <div class="col-5 d-flex">
               <div class="post post_type-study">
                 <div class="post__title post__title_priority">
-                  <p class="text-bold mb-0">Дистанционное обучение</p><a class="btn btn_cta" href="#">Записаться</a>
+                  <p class="text-bold mb-0">Дистанционное обучение</p><a class="btn btn_cta" data-fancybox="modal-2" data-src="#modalCall" href="javascript:;">Записаться</a>
                 </div>
                 <div class="post__offer">
                   <p>
@@ -221,7 +231,7 @@
             <div class="col-5 d-flex">
               <div class="post post_type-study">
                 <div class="post__title post__title_default">
-                  <p class="text-bold mb-0">Очное обучение</p><a class="btn btn_cta" href="#">Записаться</a>
+                  <p class="text-bold mb-0">Очное обучение</p><a class="btn btn_cta" data-fancybox="modal-3" data-src="#modalCall" href="javascript:;">Записаться</a>
                 </div>
                 <div class="post__offer"> 
                   <p>
@@ -323,6 +333,19 @@
           </div>
         </div>
       </section>
+      <div class="modal modal_call" id="modalCall">
+        <p class="h4 text-bold mb-30">Наш менеджер свяжется с&nbsp;вами</p>
+        <form class="form" action="">
+          <div class="form__group">
+            <input class="form__input" placeholder="Ваше имя" type="text"/>
+            <input class="form__input phone" placeholder="Телефон" type="tel"/><a class="btn btn_cta" href="#">Отправить заявку</a>
+          </div>
+          <div class="form__agree checkbox">
+            <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+            <label class="checkbox__label" for="agree">согласен с <a class="checkbox__link" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -356,6 +379,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"> </script>

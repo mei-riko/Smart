@@ -63,3 +63,36 @@
     margin-right: 10px;
     margin-top: -4px;
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .icon-block{
+        &_inline{
+            justify-content: space-between;
+        }
+        &__item{
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .icon-block{
+        &_inline{
+            flex-wrap: wrap;
+        }
+        &__item{
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            line-height: 1.2em;
+
+            margin-bottom: 10px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .icon-block{
+        &__item{
+            align-items: flex-start;
+        }
+    }
+}

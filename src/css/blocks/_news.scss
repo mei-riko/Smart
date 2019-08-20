@@ -35,3 +35,22 @@
         padding: 10px 30px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .news{
+        margin-bottom: 40px;
+
+        &.last{
+            margin-bottom: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .news{
+        margin-bottom: 30px;
+
+        &.last{
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.modal{
+    display: none;
+
+    &_call{
+        width: 500px;
+        max-width: 100%;
+    }
+    &_faq{
+        width: 500px;
+        max-width: 100%;
+        background: $light-grey;
+    }
+    &_filter{
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                padding: 4px;
+            }
+        }
+    }
+}
+
+.modal-filter{
+    background: $light-grey;
+    display: inline-block;
+
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    &:hover{
+        text-decoration: none;
+        background: darken($color: $light-grey, $amount: 3%);
+    }
+}

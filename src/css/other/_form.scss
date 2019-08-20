@@ -15,7 +15,14 @@
             margin-top: 30px;
         }
     }
-
+    &__group{
+        & + .form__group{
+            margin-top: 15px;
+        }
+        & + .btn{
+            margin-top: 30px;
+        }
+    }
     &__agree{
         margin-top: 1rem;
         font-size: 12px;
@@ -33,7 +40,6 @@
         }
     }
 }
-
 .checkbox{
     display: flex;
     flex-wrap: nowrap;
@@ -46,18 +52,19 @@
             display: block;
             background-color: $red;
 
-            width: 7px;
-            height: 7px;
+            width: 5px;
+            height: 5px;
 
             position: absolute;
-            left: 2px;
-            top: 5px;
+            left: 4px;
+            top: 3px;
         }
     }
     &__label{
         position: relative;
         margin: 0;
         padding-left: 28px;
+        line-height: 12px;
 
         cursor: pointer;
 
@@ -72,10 +79,27 @@
 
             position: absolute;
             left: 0;
-            top: 2px;
+            top: 0;
         }
     }
     &__link{
         text-decoration: underline;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .form{
+        &_inline{
+            .form__group{
+                flex-wrap: wrap;
+                .form__input + .btn{
+                    margin-top: 20px;
+                    margin-left: 0px;
+                }
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
     }
 }

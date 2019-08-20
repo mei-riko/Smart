@@ -59,4 +59,47 @@ $(document).ready(() =>{
             arrows: false
         });
     }
+
+    // Navbar
+    $(".nav__item_has-child .nav__link.nav__link_parent").on("click", function(e){
+        e.preventDefault();
+        let href = $(this).data("href");
+
+        if( $( this ).hasClass("nav__link--active") ){
+            $( this ).removeClass("nav__link--active");
+            $( href ).removeClass("nav__dropdown--active");
+            $( href ).slideUp();
+        }else{
+            // remove active    
+            let hrefActive = $(".nav__item_has-child .nav__link.nav__link--active").data("href");
+            $( hrefActive ).removeClass("nav__dropdown--active");
+            $( hrefActive ).slideUp();
+            $(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
+            // add active status
+            $( this ).addClass("nav__link--active");
+            $( href ).addClass("nav__dropdown--active");
+            $( href ).slideDown();
+        }    
+    });
+   
+    // Navbar Mobile
+    $(".header__nav#mobile-nav").on("click", function(e){
+        $(".header .nav.nav_mobile").slideToggle();
+    });
+
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+		let dropdownActive = $(".nav__dropdown.nav__dropdown--active"); // элемент
+        let mobileActive = $(".header .nav.nav_mobile");
+        
+		if (!dropdownActive.is(e.target) // клик был не по блоку
+            && dropdownActive.has(e.target).length === 0) { // и не по его дочерним элементам
+                $(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
+                dropdownActive.removeClass("nav__dropdown--active");
+                dropdownActive.slideUp();
+        }
+        
+        if (!mobileActive.is(e.target) && mobileActive.has(e.target).length === 0 && !$(".header__nav#mobile-nav").is(e.target)) {
+            mobileActive.slideUp();
+		}
+    });
 });

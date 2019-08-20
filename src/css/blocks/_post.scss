@@ -11,10 +11,13 @@
     
             display: inline-block;
             margin: 0 auto 20px;
+
+            transition: .4s;
         }
     }
 
     &_type-study{
+        width: 100%;
         .post__title{
             display: flex;
             flex-wrap: nowrap;
@@ -46,6 +49,15 @@
 
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
+        }
+    }
+
+    &_link{
+        &:hover{
+            text-decoration: none;
+            .post__image{
+                background: $light-grey;
+            }
         }
     }
 
