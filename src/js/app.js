@@ -36,7 +36,7 @@ $(document).ready(() =>{
         }
     });
 
-    // Index Slider
+    // Slider
     if( $('.slider_license').length > 0 ){
         let $status = $('.slider-numeric');
         let $slickElementIndex = $('.slider_license#index-slider');
@@ -56,7 +56,17 @@ $(document).ready(() =>{
         let $slickElementStudy = $('.slider_license#study-slider');
         $slickElementStudy.slick({
             slidesToShow: 4,
-            arrows: false
+            arrows: false,
+            responsive: [
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                  }
+                }
+            ]
         });
     }
 

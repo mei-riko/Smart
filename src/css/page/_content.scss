@@ -79,6 +79,10 @@
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content{
+        /* Offset */
+        &.p-md-40{padding: 40px 0;}
+    }
     .element{
         &_ellips{
             top: -60px;

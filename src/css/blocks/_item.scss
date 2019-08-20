@@ -141,3 +141,43 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .item-block{
+        &_faq{
+            margin-bottom: 40px;
+            &.last{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .item-row{
+        flex-wrap: wrap;
+        justify-content: center;
+        .item{
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        &::before{
+            display: none;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .item-block{
+        &_faq{
+            margin-bottom: 30px;
+            &.last{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .item-row{
+        .item{
+            padding: 0;
+        }
+        
+    }
+}

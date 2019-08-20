@@ -113,7 +113,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         }
     });
 
-    // Index Slider
+    // Slider
     if ((0, _jquery2.default)('.slider_license').length > 0) {
         var $status = (0, _jquery2.default)('.slider-numeric');
         var $slickElementIndex = (0, _jquery2.default)('.slider_license#index-slider');
@@ -133,7 +133,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         var $slickElementStudy = (0, _jquery2.default)('.slider_license#study-slider');
         $slickElementStudy.slick({
             slidesToShow: 4,
-            arrows: false
+            arrows: false,
+            responsive: [{
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true
+                }
+            }]
         });
     }
 

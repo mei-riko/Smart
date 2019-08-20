@@ -179,9 +179,15 @@ a{
 .pb-60{padding-bottom: 60px;}
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .mt-lg-30{margin-top: 30px;}
+    .text-lg-left{text-align: left;}
+    .text-lg-center{text-align: center;}
+    .text-lg-right{text-align: right;}
+}
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .d-md-none{display: none;}
+    .mt-md-30{margin-top: 30px;}
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .d-sm-none{display: none;}

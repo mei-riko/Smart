@@ -40,3 +40,9 @@
         background: darken($color: $light-grey, $amount: 3%);
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .modal-filter{
+        position: initial;
+    }
+}

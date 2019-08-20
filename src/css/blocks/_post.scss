@@ -1,5 +1,4 @@
 .post{
-
     &_category{
         margin-top: 60px;
         text-align: center;
@@ -61,4 +60,30 @@
         }
     }
 
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .post{
+        &_category{
+            margin-top: 30px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .post{
+        &_category{
+            .post__image{
+                width: 120px;
+                padding: 6px;
+            }
+        }
+        &_type-study{
+            .post__title{
+                flex-wrap: wrap;
+                .btn{
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
 }

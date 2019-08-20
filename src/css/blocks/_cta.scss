@@ -76,3 +76,30 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .cta-block{
+        .cta-block__row{
+            flex-wrap: wrap;
+        }
+        .cta-block__price{
+            margin: 30px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .cta-block{
+        .cta-block__price{
+            margin: 30px 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .cta-block{
+        .cta-block__btn{
+            .btn{
+                padding: 20px 30px;
+            }
+        }
+    }
+}
