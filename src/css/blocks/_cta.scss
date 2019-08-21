@@ -82,15 +82,31 @@
         .cta-block__row{
             flex-wrap: wrap;
         }
+        .cta-block__content{
+            margin-bottom: 30px;
+        }
         .cta-block__price{
             margin: 30px;
+        }
+        .cta-block__btn{
+            padding-left: 180px;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .cta-block{
+        .cta-block__content{
+            padding: 0;
+            max-width: 100%;
+            .cta-block__img{
+                display: none;
+            }
+        }
         .cta-block__price{
             margin: 30px 0;
+        }
+        .cta-block__btn{
+            padding-left: 0px;
         }
     }
 }

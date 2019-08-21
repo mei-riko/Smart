@@ -181,6 +181,7 @@ a{
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .mt-lg-30{margin-top: 30px;}
+    .ml-lg-0{margin-left: 0px;}
     .text-lg-left{text-align: left;}
     .text-lg-center{text-align: center;}
     .text-lg-right{text-align: right;}
