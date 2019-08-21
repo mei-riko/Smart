@@ -1213,6 +1213,18 @@ a:hover, a:focus {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
+  position: relative;
+}
+
+.header .header__link_phone:before {
+  position: absolute;
+  left: -32px;
+  top: -2px;
+  content: '';
+  display: block;
+  width: 26px;
+  height: 30px;
+  background: url("/img/mobile-phone.svg") no-repeat center/contain;
 }
 
 .header .header__link_phone:hover {
@@ -1238,6 +1250,9 @@ a:hover, a:focus {
     height: 30px;
     background: url("/img/call-answer.svg") no-repeat center/20px;
     margin-left: auto;
+  }
+  .header .header__link_phone:before {
+    display: none;
   }
 }
 
