@@ -45,18 +45,33 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .navigation-block{
         padding: 0;
+        position: relative;
         .nav{
             flex-wrap: nowrap;
             overflow-x: auto;
             overflow-y: hidden;
 
             justify-content: start;
+
             .nav__item{
                 white-space: nowrap;
 
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
+        }
+        .navigation-block__scroll{
+            content:'';
+            display: block;
+
+            width: 20px;
+            height: 20px;
+
+            background: url("/img/arrow-next.svg") no-repeat center / contain;
+
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 10px);
         }
     }
 }

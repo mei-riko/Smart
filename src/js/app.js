@@ -96,6 +96,25 @@ $(document).ready(() =>{
     $(".header__nav#mobile-nav").on("click", function(e){
         $(".header .nav.nav_mobile").slideToggle();
     });
+    $(".header .nav.nav_mobile .nav__title").on("click", function(e){
+        let href = $(this).data("href");
+
+        if( $( this ).hasClass("nav__title--active") ){
+            $( this ).removeClass("nav__title--active");
+            $( href ).removeClass("nav__hidden--active");
+            $( href ).slideUp();
+        }else{
+            // remove active    
+            let hrefActive = $(".header .nav.nav_mobile .nav__title.nav__title--active").data("href");
+            $( hrefActive ).removeClass("nav__hidden--active");
+            $( hrefActive ).slideUp();
+            $(".header .nav.nav_mobile .nav__title.nav__title--active").removeClass("nav__title--active");
+            // add active status
+            $( this ).addClass("nav__title--active");
+            $( href ).addClass("nav__hidden--active");
+            $( href ).slideDown();
+        }    
+    });
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		let dropdownActive = $(".nav__dropdown.nav__dropdown--active"); // элемент
@@ -111,5 +130,9 @@ $(document).ready(() =>{
         if (!mobileActive.is(e.target) && mobileActive.has(e.target).length === 0 && !$(".header__nav#mobile-nav").is(e.target)) {
             mobileActive.slideUp();
 		}
+    });
+
+    $(".navigation-block .navigation-block__scroll").on("click", function(){
+        $(".navigation-block .nav").animate({scrollLeft: "+=" + 150 + "px"})
     });
 });

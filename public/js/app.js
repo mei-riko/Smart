@@ -171,6 +171,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _jquery2.default)(".header__nav#mobile-nav").on("click", function (e) {
         (0, _jquery2.default)(".header .nav.nav_mobile").slideToggle();
     });
+    (0, _jquery2.default)(".header .nav.nav_mobile .nav__title").on("click", function (e) {
+        var href = (0, _jquery2.default)(this).data("href");
+
+        if ((0, _jquery2.default)(this).hasClass("nav__title--active")) {
+            (0, _jquery2.default)(this).removeClass("nav__title--active");
+            (0, _jquery2.default)(href).removeClass("nav__hidden--active");
+            (0, _jquery2.default)(href).slideUp();
+        } else {
+            // remove active    
+            var hrefActive = (0, _jquery2.default)(".header .nav.nav_mobile .nav__title.nav__title--active").data("href");
+            (0, _jquery2.default)(hrefActive).removeClass("nav__hidden--active");
+            (0, _jquery2.default)(hrefActive).slideUp();
+            (0, _jquery2.default)(".header .nav.nav_mobile .nav__title.nav__title--active").removeClass("nav__title--active");
+            // add active status
+            (0, _jquery2.default)(this).addClass("nav__title--active");
+            (0, _jquery2.default)(href).addClass("nav__hidden--active");
+            (0, _jquery2.default)(href).slideDown();
+        }
+    });
 
     (0, _jquery2.default)(document).mouseup(function (e) {
         // событие клика по веб-документу
@@ -188,6 +207,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         if (!mobileActive.is(e.target) && mobileActive.has(e.target).length === 0 && !(0, _jquery2.default)(".header__nav#mobile-nav").is(e.target)) {
             mobileActive.slideUp();
         }
+    });
+
+    (0, _jquery2.default)(".navigation-block .navigation-block__scroll").on("click", function () {
+        (0, _jquery2.default)(".navigation-block .nav").animate({ scrollLeft: "+=" + 150 + "px" });
     });
 });
 

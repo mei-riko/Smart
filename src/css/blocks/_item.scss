@@ -71,7 +71,6 @@
         }
     }
 }
-
 .item-row{
     display: flex;
     flex-wrap: nowrap;
@@ -177,7 +176,23 @@
     .item-row{
         .item{
             padding: 0;
+            &_work-step{
+                position: relative;
+                width: 100%;
+                padding-left: 60px;
+                .item__number{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .item__title{
+                    text-align: left;
+                }
+                .item__content{
+                    text-align: left;
+                    width: 100%;
+                }
+            }
         }
-        
     }
 }
