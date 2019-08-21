@@ -59,7 +59,10 @@
     &_study{
         background: $white;
     }
-
+    /* For text page */
+    &_inside{
+        padding: 60px 0;
+    }
     .list{
         &-item{
             &:before{

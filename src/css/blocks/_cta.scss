@@ -91,6 +91,11 @@
         .cta-block__btn{
             padding-left: 180px;
         }
+        &_check-list{
+            .cta-block__title{
+                font-size: 42px;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
@@ -108,6 +113,12 @@
         .cta-block__btn{
             padding-left: 0px;
         }
+
+        &_check-list{
+            .cta-block__title{
+                font-size: 32px;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
@@ -115,6 +126,11 @@
         .cta-block__btn{
             .btn{
                 padding: 20px 30px;
+            }
+        }
+        &_check-list{
+            & + .maps{
+                padding-top: 30px;
             }
         }
     }

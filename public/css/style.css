@@ -649,6 +649,12 @@ a:hover, a:focus {
   .mt-md-30 {
     margin-top: 30px;
   }
+  .mb-md-30 {
+    margin-bottom: 30px;
+  }
+  .breadcrumbs {
+    margin-bottom: 0;
+  }
 }
 
 @media all and (max-width: 576px) {
@@ -2279,6 +2285,9 @@ a:hover, a:focus {
   .cta-block .cta-block__btn {
     padding-left: 180px;
   }
+  .cta-block_check-list .cta-block__title {
+    font-size: 42px;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -2295,11 +2304,17 @@ a:hover, a:focus {
   .cta-block .cta-block__btn {
     padding-left: 0px;
   }
+  .cta-block_check-list .cta-block__title {
+    font-size: 32px;
+  }
 }
 
 @media all and (max-width: 576px) {
   .cta-block .cta-block__btn .btn {
     padding: 20px 30px;
+  }
+  .cta-block_check-list + .maps {
+    padding-top: 30px;
   }
 }
 
@@ -2396,6 +2411,7 @@ a:hover, a:focus {
   /* For index page */
   /* For error page */
   /* For study page*/
+  /* For text page */
 }
 
 .header-block__title {
@@ -2458,6 +2474,10 @@ a:hover, a:focus {
 
 .header-block_study {
   background: #ffffff;
+}
+
+.header-block_inside {
+  padding: 60px 0;
 }
 
 .header-block .list-item:before {
