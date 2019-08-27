@@ -44,8 +44,10 @@
             border-radius: 4px;
             padding: 6px 10px;
             
-            background: $red;
+            background: $violet;
             color: $white;
+
+            font-weight: bold;
 
             &:before{
                 content: 'Подробнее';
@@ -58,7 +60,7 @@
                 left: 0;
                 top: 0;
 
-                background: $violet;
+                background: $red;
 
                 text-align: center;
                 transform: translateY(-100%);

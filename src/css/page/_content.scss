@@ -43,7 +43,8 @@
 
         position: absolute;
         top: -80px;
-        left: 30px;
+        // left: 30px;
+        left: - 220px;
     }
     &_square{
         width: 150px;
@@ -51,7 +52,8 @@
 
         position: absolute;
         bottom: -120px;
-        right: -120px;
+        // right: -120px;
+        right: -180px;
     }
 }
 .maps{
@@ -60,7 +62,8 @@
         position: absolute;
         top: -30px;
         left: 0;
-        
+        width: 100%;
+
         padding: 20px;
 
         background: $white;
@@ -69,12 +72,34 @@
 
         text-align: center;
     }
+    .icon-1{background: url("/img/icon-5.svg") no-repeat left center / 32px; padding: 8px 0px 8px 38px;}
+    .icon-2{background: url("/img/icon-2.svg") no-repeat left center / 32px; padding: 8px 0px 8px 38px;}
+    .icon-3{background: url("/img/icon-3.svg") no-repeat left center / 32px; padding: 8px 0px 8px 38px;}
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .maps{
+        &-info{
+            top: -75px;
+        }
+    }
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .element{
         &_square{
-            bottom: -150px;
-            right: 0;
+            // bottom: -150px;
+            // right: 0;
+            bottom: -100px;
+            right: -140px;
+        }
+        &_ellips{
+            // left: 0;
+        }
+    }
+    .maps{
+        &-info{
+            top: -80px;
+            padding: 10px 20px;
         }
     }
 }
@@ -85,8 +110,9 @@
     }
     .element{
         &_ellips{
-            top: -60px;
-            left: 0px;
+            // top: -60px;
+            // left: 0px;
+            display: none;
         }
         &_square{
             display: none;
@@ -109,7 +135,7 @@
             position: unset;
             top: 0;
             left: 0;
-            padding: 0 0 40px;
+            padding: 0 0 30px;
             border: none;
         }
     }
