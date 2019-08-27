@@ -21,6 +21,21 @@
             }
         }
     }
+    &_poll{
+        max-width: 740px;
+        padding: 0;
+        .fancybox-button svg path{
+            fill: $white;
+        }
+        .modal__title{
+            padding: 44px;
+            background: $violet;
+            color: $white;
+        }
+        .modal__content{
+            padding: 44px;
+        }
+    }
 }
 
 .modal-filter{

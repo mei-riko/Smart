@@ -74,8 +74,8 @@
 
             border: 1px solid $light-grey;
 
-            width: 12px;
-            height: 12px;
+            width: 13px;
+            height: 13px;
 
             position: absolute;
             left: 0;
@@ -84,6 +84,25 @@
     }
     &__link{
         text-decoration: underline;
+    }
+
+    &_large{
+        .checkbox__label{
+            line-height: 22px;
+            &:before{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .checkbox__input{
+            &:checked + .checkbox__label:after {
+                width: 9px;
+                height: 9px;
+
+                left: 5px;
+                top: 4px;
+            }
+        }
     }
 }
 

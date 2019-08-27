@@ -51,6 +51,7 @@ html(lang="ru")
                                     <path fill-rule="evenodd"  fill="url(#image)" d="M380.054,18.985 C356.575,33.051 343.816,60.226 320.556,74.698 C299.158,88.016 272.465,89.730 247.477,89.645 C196.881,89.471 138.054,68.976 122.866,133.072 C112.521,176.716 172.280,204.548 157.683,246.568 C153.129,259.694 138.967,269.403 127.338,277.594 C98.447,297.938 76.938,315.421 55.551,344.330 C15.504,398.427 12.662,423.629 26.664,457.693 C41.848,494.625 98.621,529.291 145.735,511.969 C202.254,491.198 196.904,476.862 259.789,453.909 C312.860,434.527 383.661,472.440 421.000,485.000 C508.270,514.358 607.281,512.484 659.000,310.999 C670.470,266.337 677.417,219.454 666.602,151.475 C659.000,103.687 604.456,107.727 582.553,115.498 C504.168,143.335 444.937,-19.888 380.054,18.985 Z"/>
                                 </g>
                             </svg>
+            a.btn.btn_cta(data-fancybox="modalOut" data-src="#modalOut" href="javascript:;") Exit
             section
                 .container
                     .cta-block.cta-block_card
@@ -235,6 +236,50 @@ html(lang="ru")
                         input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
                         label.checkbox__label(for="agree") согласен с 
                             a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
+            .modal.modal_poll#modalOut
+                .modal__title
+                    p.h4.text-uppercase.mb-30.text-sm-center.text-bold ГОРЯЩЕЕ ПРЕДЛОЖЕНИЕ ОТ ЦЕНТРА ОБУЧЕНИЯ SMART
+                    .row.no-gutters
+                        .col-6.col-sm-12.text-sm-center
+                            p.mb-0.mb-sm-30 Получи промокод на скидку в 15% на оплату любой программы
+                        .col-6.col-sm-12.text-center
+                            .h1.text-bold.timer#timer
+                .modal__content.poll
+                    p.text-small.mb-30 Промокод выдается единовременно при отправлении заявки 
+                        | с формы и действует с момента выдачи 3 месяца.
+                    form.form.form_inline(action="")
+                        .poll__row.row.no-gutters#pollRow
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm1(type="checkbox" name="programm1" data-value="test" value="test")
+                                    label.checkbox__label(for="programm1") 
+                                        span.poll__name ПТМ
+                                        input.poll__input#programmInput1(data-id="#programm1" type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm2(type="checkbox" name="programm2")
+                                    label.checkbox__label(for="programm2") 
+                                        span.poll__name Охрана труда
+                                        input.poll__input#programmInput2(type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm3(type="checkbox" name="programm3")
+                                    label.checkbox__label(for="programm3") 
+                                        span.poll__name Повышение квалификации
+                                        input.poll__input#programmInput3(type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm4(type="checkbox" name="programm4")
+                                    label.checkbox__label(for="programm4") 
+                                        span.poll__name Первая помощь
+                                        input.poll__input#programmInput4(type="number" min="0" max="100" value="1")
+                        .form__group
+                            input.form__input.phone(placeholder="Телефон" type="tel")
+                            a.btn.btn_cta(href="#") Отправить
+                        .form__agree.checkbox
+                            input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                            label.checkbox__label(for="agree") согласен с 
+                                a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
         include chunks/footer.pug
         script(src="./js/jquery.fancybox.min.js")
         script(src="./js/jquery.inputmask.js")

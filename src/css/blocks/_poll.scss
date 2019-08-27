@@ -1,0 +1,40 @@
+.poll{
+    .poll__name{
+        margin-right: 20px;
+    }
+    .poll__input{
+        border: 1px solid #95989a;
+        padding: 2px 10px;
+        margin: 0;
+
+        opacity: 0;
+        transition: .4s;
+    }
+    .checkbox{
+        .checkbox__label{
+            display: flex;
+            align-items: center;
+            &:before{
+                background: lighten($color: $grey, $amount: 25%);
+                top: calc(50%);
+                transform: translateY(-50%);
+            }
+        }
+        .checkbox__input{
+            &:checked + .checkbox__label:after {
+                top: calc(50%);
+                transform: translateY(-50%);
+            }
+            &:checked + .checkbox__label{
+                .poll__input{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.timer{
+    margin-bottom: 0;
+    color: $green;
+}

@@ -133,6 +133,70 @@ $(document).ready(() =>{
     });
 
     $(".navigation-block .navigation-block__scroll").on("click", function(){
-        $(".navigation-block .nav").animate({scrollLeft: "+=" + 150 + "px"})
+        $(".navigation-block .nav").animate({scrollLeft: "+=" + 150 + "px"});
     });
+
+    // Timer
+
+    function countDown() {
+        var seconds = 70997;
+        var timer = setInterval(function() {
+            if (seconds > 0) {
+                seconds --;
+                var h = seconds/3600 ^ 0,
+                    m = (seconds-h*3600)/60 ^ 0,
+                    s = seconds-h*3600-m*60,
+                    time = (h<10?"0"+h:h) + ":" + (m<10?"0"+m:m) + ":" + (s<10?"0"+s:s);
+                $("#timer").text(time);
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+
+    countDown();
+
+    var start = new Date();
+    var time;
+
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+      
+    // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+    var alertwin2 = getCookie("alertwin2");
+    if ( alertwin2 != "no" && $(window).width() > 991 ) {
+        $(document).mouseleave(function(e){
+            time = new Date();
+            let timeCheck = Math.round ( ( time - start ) / 1000 );
+            // console.log( timeCheck );
+            
+            if (e.clientY < -1 && !$("#modalOut").hasClass("open") && timeCheck > 40) {
+                
+                $.fancybox.open({
+                    src  : '#modalOut',
+                })
+                $("#modalOut").addClass("open");
+
+                // записываем cookie
+                var date = new Date;
+                date.setDate(date.getDate() + 1 ); 
+                document.cookie = "alertwin2=no; path=/; expires=" + date.toUTCString();
+            }
+        });
+    }
+
+    // Change Value Poll
+    $(".poll__input").on("change", function(){
+        let programmId = $(this).data("id");
+        let programmName = $( programmId ).data("value");
+        let programmVal = $(this).val();
+
+        // console.log( programmName + ' ' + programmVal);
+
+        $( programmId ).val(programmName + ' (' + programmVal + ');');
+    })
 });

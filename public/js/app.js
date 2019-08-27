@@ -212,6 +212,68 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _jquery2.default)(".navigation-block .navigation-block__scroll").on("click", function () {
         (0, _jquery2.default)(".navigation-block .nav").animate({ scrollLeft: "+=" + 150 + "px" });
     });
+
+    // Timer
+
+    function countDown() {
+        var seconds = 70997;
+        var timer = setInterval(function () {
+            if (seconds > 0) {
+                seconds--;
+                var h = seconds / 3600 ^ 0,
+                    m = (seconds - h * 3600) / 60 ^ 0,
+                    s = seconds - h * 3600 - m * 60,
+                    time = (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+                (0, _jquery2.default)("#timer").text(time);
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+
+    countDown();
+
+    var start = new Date();
+    var time;
+
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+    var alertwin2 = getCookie("alertwin2");
+    if (alertwin2 != "no" && (0, _jquery2.default)(window).width() > 991) {
+        (0, _jquery2.default)(document).mouseleave(function (e) {
+            time = new Date();
+            var timeCheck = Math.round((time - start) / 1000);
+            // console.log( timeCheck );
+
+            if (e.clientY < -1 && !(0, _jquery2.default)("#modalOut").hasClass("open") && timeCheck > 40) {
+
+                _jquery2.default.fancybox.open({
+                    src: '#modalOut'
+                });
+                (0, _jquery2.default)("#modalOut").addClass("open");
+
+                // записываем cookie
+                var date = new Date();
+                date.setDate(date.getDate() + 1);
+                document.cookie = "alertwin2=no; path=/; expires=" + date.toUTCString();
+            }
+        });
+    }
+
+    // Change Value Poll
+    (0, _jquery2.default)(".poll__input").on("change", function () {
+        var programmId = (0, _jquery2.default)(this).data("id");
+        var programmName = (0, _jquery2.default)(programmId).data("value");
+        var programmVal = (0, _jquery2.default)(this).val();
+
+        // console.log( programmName + ' ' + programmVal);
+
+        (0, _jquery2.default)(programmId).val(programmName + ' (' + programmVal + ');');
+    });
 });
 
 /***/ }),

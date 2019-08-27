@@ -142,7 +142,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section><a class="btn btn_cta" data-fancybox="modalOut" data-src="#modalOut" href="javascript:;">Exit</a>
       <section>
         <div class="container">
           <div class="cta-block cta-block_card">
@@ -373,6 +373,66 @@
             <label class="checkbox__label" for="agree">согласен с <a class="checkbox__link" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
           </div>
         </form>
+      </div>
+      <div class="modal modal_poll" id="modalOut">
+        <div class="modal__title">
+          <p class="h4 text-uppercase mb-30 text-sm-center text-bold">ГОРЯЩЕЕ ПРЕДЛОЖЕНИЕ ОТ ЦЕНТРА ОБУЧЕНИЯ SMART</p>
+          <div class="row no-gutters">
+            <div class="col-6 col-sm-12 text-sm-center">
+              <p class="mb-0 mb-sm-30">Получи промокод на скидку в 15% на оплату любой программы</p>
+            </div>
+            <div class="col-6 col-sm-12 text-center">
+              <div class="h1 text-bold timer" id="timer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__content poll">
+          <p class="text-small mb-30">
+            Промокод выдается единовременно при отправлении заявки с формы и действует с момента выдачи 3 месяца.</p>
+          <form class="form form_inline" action="">
+            <div class="poll__row row no-gutters" id="pollRow">
+              <div class="col-6 col-sm-12 mb-20">
+                <div class="checkbox checkbox_large">
+                  <input class="checkbox__input" id="programm1" type="checkbox" name="programm1" data-value="test" value="test"/>
+                  <label class="checkbox__label" for="programm1"> <span class="poll__name">ПТМ</span>
+                    <input class="poll__input" id="programmInput1" data-id="#programm1" type="number" min="0" max="100" value="1"/>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6 col-sm-12 mb-20">
+                <div class="checkbox checkbox_large">
+                  <input class="checkbox__input" id="programm2" type="checkbox" name="programm2"/>
+                  <label class="checkbox__label" for="programm2"> <span class="poll__name">Охрана труда</span>
+                    <input class="poll__input" id="programmInput2" type="number" min="0" max="100" value="1"/>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6 col-sm-12 mb-20">
+                <div class="checkbox checkbox_large">
+                  <input class="checkbox__input" id="programm3" type="checkbox" name="programm3"/>
+                  <label class="checkbox__label" for="programm3"> <span class="poll__name">Повышение квалификации</span>
+                    <input class="poll__input" id="programmInput3" type="number" min="0" max="100" value="1"/>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6 col-sm-12 mb-20">
+                <div class="checkbox checkbox_large">
+                  <input class="checkbox__input" id="programm4" type="checkbox" name="programm4"/>
+                  <label class="checkbox__label" for="programm4"> <span class="poll__name">Первая помощь</span>
+                    <input class="poll__input" id="programmInput4" type="number" min="0" max="100" value="1"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form__group">
+              <input class="form__input phone" placeholder="Телефон" type="tel"/><a class="btn btn_cta" href="#">Отправить</a>
+            </div>
+            <div class="form__agree checkbox">
+              <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+              <label class="checkbox__label" for="agree">согласен с <a class="checkbox__link" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer">

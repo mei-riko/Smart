@@ -180,16 +180,35 @@ a{
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .d-lg-none{display: none;}
+
+    .mt-lg-0{margin-top: 0px;}
     .mt-lg-30{margin-top: 30px;}
-    .ml-lg-0{margin-left: 0px;}
+    .mt-lg-60{margin-top: 60px;}
+    .mb-lg-0{margin-bottom: 0px;}
+    .mb-lg-20{margin-bottom: 20px;}
+    .mb-lg-30{margin-bottom: 30px;}
+    .mb-lg-60{margin-bottom: 60px;}
+    .mr-lg-0{margin-right: 0}
+    .ml-lg-0{margin-left: 0}
+
     .text-lg-left{text-align: left;}
     .text-lg-center{text-align: center;}
     .text-lg-right{text-align: right;}
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .d-md-none{display: none;}
+    
+    .mt-md-0{margin-top: 0px;}
     .mt-md-30{margin-top: 30px;}
+    .mt-md-60{margin-top: 60px;}
+    .mb-md-0{margin-bottom: 0px;}
+    .mb-md-20{margin-bottom: 20px;}
     .mb-md-30{margin-bottom: 30px;}
+    .mb-md-60{margin-bottom: 60px;}
+    .mr-md-0{margin-right: 0}
+    .ml-md-0{margin-left: 0}
+
     .breadcrumbs{
         margin-bottom: 0;
     }
@@ -210,7 +229,16 @@ a{
 
     .text-sm-small{font-size: 12px;}
 
+    .mt-sm-0{margin-top: 0;}
     .mt-sm-15{margin-top: 15px;}
     .mt-sm-30{margin-top: 30px;}
+    .mt-sm-60{margin-top: 60px;}
+
+    .mb-sm-0{margin-bottom: 0px;}
+    .mb-sm-20{margin-bottom: 20px;}
     .mb-sm-30{margin-bottom: 30px;}
+    .mb-sm-60{margin-bottom: 60px;}
+
+    .mr-sm-0{margin-right: 0}
+    .ml-sm-0{margin-left: 0}
 }

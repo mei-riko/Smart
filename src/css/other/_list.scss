@@ -20,8 +20,9 @@
             top:calc(50% - 4px);
         }
 
-        & + .list-item{
+        & + .list-item:not(.col){
             margin-top: .5rem;
+
         }
     }
 }
