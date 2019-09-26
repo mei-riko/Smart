@@ -208,6 +208,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             mobileActive.slideUp();
         }
     });
+    // Hide Navigation on Desktop
+    (0, _jquery2.default)(window).resize(function () {
+        if ((0, _jquery2.default)(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches) {
+            (0, _jquery2.default)(".header .nav.nav_mobile").slideUp();
+            var hrefActive = (0, _jquery2.default)(".header .nav.nav_mobile .nav__title.nav__title--active").data("href");
+            (0, _jquery2.default)(hrefActive).removeClass("nav__hidden--active");
+            (0, _jquery2.default)(hrefActive).slideUp();
+            (0, _jquery2.default)(".header .nav.nav_mobile .nav__title.nav__title--active").removeClass("nav__title--active");
+        }
+    });
 
     (0, _jquery2.default)(".navigation-block .navigation-block__scroll").on("click", function () {
         (0, _jquery2.default)(".navigation-block .nav").animate({ scrollLeft: "+=" + 150 + "px" });

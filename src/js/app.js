@@ -131,6 +131,16 @@ $(document).ready(() =>{
             mobileActive.slideUp();
 		}
     });
+    // Hide Navigation on Desktop
+    $(window).resize(function(){
+        if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+            $(".header .nav.nav_mobile").slideUp();
+            let hrefActive = $(".header .nav.nav_mobile .nav__title.nav__title--active").data("href");
+            $( hrefActive ).removeClass("nav__hidden--active");
+            $( hrefActive ).slideUp();
+            $(".header .nav.nav_mobile .nav__title.nav__title--active").removeClass("nav__title--active");
+        }
+    });
 
     $(".navigation-block .navigation-block__scroll").on("click", function(){
         $(".navigation-block .nav").animate({scrollLeft: "+=" + 150 + "px"});
