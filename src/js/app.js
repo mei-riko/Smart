@@ -75,21 +75,23 @@ $(document).ready(() =>{
         e.preventDefault();
         let href = $(this).data("href");
 
-        if( $( this ).hasClass("nav__link--active") ){
-            $( this ).removeClass("nav__link--active");
-            $( href ).removeClass("nav__dropdown--active");
-            $( href ).slideUp();
-        }else{
-            // remove active    
+        if( !$( this ).hasClass("nav__link--active") ){
+            // remove active
+            
             let hrefActive = $(".nav__item_has-child .nav__link.nav__link--active").data("href");
             $( hrefActive ).removeClass("nav__dropdown--active");
             $( hrefActive ).slideUp();
             $(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
+            
             // add active status
             $( this ).addClass("nav__link--active");
             $( href ).addClass("nav__dropdown--active");
             $( href ).slideDown();
-        }    
+        } else{
+            $( this ).removeClass("nav__link--active");
+            $( href ).removeClass("nav__dropdown--active");
+            $( href ).slideUp();
+        }
     });
    
     // Navbar Mobile
@@ -117,10 +119,12 @@ $(document).ready(() =>{
     });
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
+		let dropdownNavActive = $(".nav__item_has-child .nav__link.nav__link--active"); // пункт меню
 		let dropdownActive = $(".nav__dropdown.nav__dropdown--active"); // элемент
         let mobileActive = $(".header .nav.nav_mobile");
         
 		if (!dropdownActive.is(e.target) // клик был не по блоку
+            && !dropdownNavActive.is(e.target) // и не по активному пункту меню
             && dropdownActive.has(e.target).length === 0) { // и не по его дочерним элементам
                 $(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
                 dropdownActive.removeClass("nav__dropdown--active");

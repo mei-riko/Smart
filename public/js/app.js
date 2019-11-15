@@ -150,20 +150,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         e.preventDefault();
         var href = (0, _jquery2.default)(this).data("href");
 
-        if ((0, _jquery2.default)(this).hasClass("nav__link--active")) {
-            (0, _jquery2.default)(this).removeClass("nav__link--active");
-            (0, _jquery2.default)(href).removeClass("nav__dropdown--active");
-            (0, _jquery2.default)(href).slideUp();
-        } else {
-            // remove active    
+        if (!(0, _jquery2.default)(this).hasClass("nav__link--active")) {
+            // remove active
+
             var hrefActive = (0, _jquery2.default)(".nav__item_has-child .nav__link.nav__link--active").data("href");
             (0, _jquery2.default)(hrefActive).removeClass("nav__dropdown--active");
             (0, _jquery2.default)(hrefActive).slideUp();
             (0, _jquery2.default)(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
+
             // add active status
             (0, _jquery2.default)(this).addClass("nav__link--active");
             (0, _jquery2.default)(href).addClass("nav__dropdown--active");
             (0, _jquery2.default)(href).slideDown();
+        } else {
+            (0, _jquery2.default)(this).removeClass("nav__link--active");
+            (0, _jquery2.default)(href).removeClass("nav__dropdown--active");
+            (0, _jquery2.default)(href).slideUp();
         }
     });
 
@@ -193,10 +195,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
     (0, _jquery2.default)(document).mouseup(function (e) {
         // событие клика по веб-документу
+        var dropdownNavActive = (0, _jquery2.default)(".nav__item_has-child .nav__link.nav__link--active"); // пункт меню
         var dropdownActive = (0, _jquery2.default)(".nav__dropdown.nav__dropdown--active"); // элемент
         var mobileActive = (0, _jquery2.default)(".header .nav.nav_mobile");
 
         if (!dropdownActive.is(e.target) // клик был не по блоку
+        && !dropdownNavActive.is(e.target) // и не по активному пункту меню
         && dropdownActive.has(e.target).length === 0) {
             // и не по его дочерним элементам
             (0, _jquery2.default)(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
