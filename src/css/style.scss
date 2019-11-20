@@ -9,12 +9,13 @@
 @import "position.scss";
 
 @import "other/header.scss";
+@import "other/footer.scss";
 @import "other/nav.scss";
 @import "other/list.scss";
 @import "other/form.scss";
 @import "other/button.scss";
 @import "other/modal.scss";
-@import "other/footer.scss";
+@import "other/pagination.scss";
 
 @import "blocks/icon.scss";
 @import "blocks/slider.scss";
@@ -27,4 +28,7 @@
 
 @import "page/header-block.scss";
 @import "page/navigation-block.scss";
+@import "page/sidebar.scss";
 @import "page/content.scss";
+@import "page/reviews.scss";
+@import "page/news.scss";

@@ -31,6 +31,10 @@
             color: $grey;
         }
     }
+
+    &_bg-white{
+        background: $white;
+    }
     /* For index page */
     &_index{
         background: $light-grey url("/img/bg-header.jpg") no-repeat center / cover;
@@ -72,6 +76,16 @@
     }
     .clip-svg{
         clip-path: url(#myClip);
+    }
+    /* For Section Page */
+    &_title{
+        padding: 30px 0;
+        .header-block__title{
+            width: 100%;
+            margin: 0;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){

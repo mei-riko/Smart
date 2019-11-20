@@ -1,0 +1,80 @@
+.news-item{
+    padding: 30px 40px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background: $white;
+
+    .news-item__title{
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .news-item__image{
+        margin-bottom: 20px;
+    }
+    .news-item__offer{
+        color: $info;
+        margin-bottom: 30px;
+    }
+    .news-item__data{
+        display: inline-block;
+        color: $info;
+        margin-right: 20px;
+    }
+    .news-item__tags{
+        color: $info;
+        background: $light-grey;
+        padding: 2px 6px 4px;
+        white-space: nowrap;
+    }
+    .news-item__footer{
+        padding-top: 20px;
+        border-top: 1px solid $border-color;
+    }
+    & + .pagination{
+        @extend .mt-30;
+    }
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -8px;
+
+    .tags__item{
+        padding: 2px 8px 4px;
+        background: $white;
+        border-radius: 4px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+
+        &:hover{
+            text-decoration: none;
+        }
+        &--active{
+            background: $red;
+            color: $white;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .news-item{
+        padding: 30px;
+        .news-item__title{
+            font-size: 1.5rem;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .news-item{
+        padding: 20px;
+        .news-item__title{
+            font-size: 1.25rem;
+        }
+    }
+}

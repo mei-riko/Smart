@@ -288,6 +288,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
         (0, _jquery2.default)(programmId).val(programmName + ' (' + programmVal + ');');
     });
+
+    // Review Open Full
+    (0, _jquery2.default)(".reviews-item .reviews-item__link").on("click", function (e) {
+        e.preventDefault();
+
+        (0, _jquery2.default)(this).toggleClass("reviews-item__link--active");
+
+        var review = (0, _jquery2.default)(this).closest(".reviews-item");
+        review.find(".reviews-item__full").slideToggle();
+
+        if ((0, _jquery2.default)(this).hasClass("reviews-item__link--active")) {
+            (0, _jquery2.default)(this).html("Скрыть");
+        } else {
+            (0, _jquery2.default)(this).html("Читать полностью");
+        }
+    });
 });
 
 /***/ }),

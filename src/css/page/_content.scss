@@ -12,6 +12,9 @@
     &_bg-grey{
         background: $light-grey;
     }
+    &_bg-white{
+        background: $white;
+    }
     &_bg-violet{
         background: $violet;
         color: $white;
@@ -23,7 +26,6 @@
             }
         }
     }
-    
     /* Elements */
     .content__title{
         margin-bottom: 60px;

@@ -1,1 +1,6 @@
-.sidebar{}
+.sidebar{
+    .sidebar__label{
+        color: $info;
+        text-transform: uppercase;
+    }
+}

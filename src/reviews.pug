@@ -1,0 +1,79 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        .content-area
+            include chunks/header.pug
+            main.inside
+                section.header-block.header-block_title
+                    .container
+                        h1.header-block__title Отзывы об учебном центре
+                section.content.content_bg-white
+                    .container
+                        .reviews-item.row
+                            .col-3.col-sm-12.text-sm-center.col-md-4
+                                a(href="../img/test-04.jpg" data-fancybox="images" data-caption="My caption")
+                                    img.img-fluid.reviews-item__image(src="../img/test-04.jpg")
+                                a.reviews-item__download(href="#") Посмотреть pdf
+                            .col-9.col-sm-12.mt-sm-20.col-md-8
+                                .reviews-item__info.row.align-items-end
+                                    .col-6
+                                        img.reviews-item__logo(src="../img/rostelecom-logo.png")
+                                    .col-6.text-right
+                                        .reviews-item__data 10 октября 2019
+                                p Dear Sir/Madam,
+                                p I am writing to recommend Ms. Alexandra Marregot-Jouanet, with whom I studied French on a part-time basis during the better part of 2013 here in Moscow. As one who has studied French periodically over the span of my twenty-year career, in addition to learning Russian and Chinese, I believe I have a good understanding of what it takes to be a good language teacher, and Ms. Marregot-Jouanet has been among the best I have ever had.
+                                p An account of Ms. Marregot-Jouanet’s qualities must begun with her professionalism, which is impeccable. She comes to every lesson thoroughly prepared, with a plan strategically developed to target the student’s areas of need and remedy them through an appropriate variety of exercises. In my case, she quickly mastered the particular requirements of my situation and expertly adapted her approach accordingly.
+                                .reviews-item__full
+                                    p Most importantly, Ms. Marregot-Jouanet is a truly gifted teacher and communicator. She has a remarkable ability to make points of difficulty in the French language clear to a non-native speaker. At the same time, she brings a level of energy and....
+                                p.mb-0
+                                    a.reviews-item__link(href="#") Читать полностью
+                        .reviews-sep
+                        .reviews-item.row
+                            .col-3.col-sm-12.text-sm-center.col-md-4
+                                a(href="../img/test-04.jpg" data-fancybox="images" data-caption="My caption")
+                                    img.img-fluid.reviews-item__image(src="../img/test-04.jpg")
+                                a.reviews-item__download(href="#") Посмотреть pdf
+                            .col-9.col-sm-12.mt-sm-20.col-md-8
+                                .reviews-item__info.row.align-items-end
+                                    .col-6
+                                        img.reviews-item__logo(src="../img/rostelecom-logo.png")
+                                    .col-6.text-right
+                                        .reviews-item__data 10 октября 2019
+                                p Dear Sir/Madam,
+                                p I am writing to recommend Ms. Alexandra Marregot-Jouanet, with whom I studied French on a part-time basis during the better part of 2013 here in Moscow. As one who has studied French periodically over the span of my twenty-year career, in addition to learning Russian and Chinese, I believe I have a good understanding of what it takes to be a good language teacher, and Ms. Marregot-Jouanet has been among the best I have ever had.
+                                p An account of Ms. Marregot-Jouanet’s qualities must begun with her professionalism, which is impeccable. She comes to every lesson thoroughly prepared, with a plan strategically developed to target the student’s areas of need and remedy them through an appropriate variety of exercises. In my case, she quickly mastered the particular requirements of my situation and expertly adapted her approach accordingly.
+                                .reviews-item__full
+                                    p Most importantly, Ms. Marregot-Jouanet is a truly gifted teacher and communicator. She has a remarkable ability to make points of difficulty in the French language clear to a non-native speaker. At the same time, she brings a level of energy and....
+                                p.mb-0
+                                    a.reviews-item__link(href="#") Читать полностью
+                section.cta-block.cta-block_bg-gradient
+                    .container
+                        .row.justify-content-center
+                            .col-6.col-md-12.col-xl-8
+                                h2.h3.text-center.text-bold.mb-30 Получите бесплатную консультацию эксперта «Smart»
+                        .row.justify-content-center
+                            .col-5.col-md-12.col-xl-8.text-center
+                                p.mb-30 Отправьте заявку и&nbsp;ведущий специалист по&nbsp;оформлению лицензии&nbsp;МЧС ответит на&nbsp;интересющие вас вопросы.
+                        .row.justify-content-center
+                            .col-6.col-md-12.col-xl-8
+                                form.form.form_inline(action="")
+                                    .form__group
+                                        input.form__input.phone(placeholder="Телефон" type="tel")
+                                        a.btn.btn_cta(href="#") Отправить
+                                    .form__agree.checkbox
+                                        input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                        label.checkbox__label(for="agree") согласен с 
+                                            a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
+            include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.fancybox.min.js")
+        script(src="./js/app.min.js") 

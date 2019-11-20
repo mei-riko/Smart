@@ -1,1 +1,36 @@
-.pagination{}
+.pagination{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .pagination__item{
+        margin-right: 10px;
+    }
+    .pagination__link{
+        border: 2px solid $info;
+        border-radius: 6px;
+        color: $info;
+
+        width: 30px;
+        height: 30px;
+        line-height: 27px;
+
+        text-align: center;
+
+        transition: .4s;
+
+        &--active{
+            border: 2px solid $red;
+            color: $red;
+            font-weight: 700;
+        }
+
+        &:hover{
+            text-decoration: none;
+            background: $white;
+        }
+    }
+}

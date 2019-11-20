@@ -213,4 +213,20 @@ $(document).ready(() =>{
 
         $( programmId ).val(programmName + ' (' + programmVal + ');');
     })
+
+    // Review Open Full
+    $(".reviews-item .reviews-item__link").on("click", function(e){
+        e.preventDefault();
+
+        $(this).toggleClass("reviews-item__link--active");
+
+        let review = $(this).closest(".reviews-item");
+        review.find(".reviews-item__full").slideToggle();
+
+        if( $(this).hasClass("reviews-item__link--active") ){
+            $(this).html("Скрыть");
+        }else{
+            $(this).html("Читать полностью");
+        }
+    })
 });
