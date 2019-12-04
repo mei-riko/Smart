@@ -304,6 +304,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             (0, _jquery2.default)(this).html("Читать полностью");
         }
     });
+
+    // Toggle
+
+    (0, _jquery2.default)(".toggle.toggle_with-content").on("click", function (e) {
+        (0, _jquery2.default)(this).toggleClass("toggle--active");
+        (0, _jquery2.default)(this).find(".toggle__content").slideToggle();
+    });
 });
 
 /***/ }),

@@ -229,4 +229,11 @@ $(document).ready(() =>{
             $(this).html("Читать полностью");
         }
     })
+
+    // Toggle
+
+    $(".toggle.toggle_with-content").on("click", function(e){
+        $(this).toggleClass("toggle--active");
+        $(this).find(".toggle__content").slideToggle();
+    });
 });

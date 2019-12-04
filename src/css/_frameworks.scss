@@ -60,11 +60,17 @@ p {
     &.lead{
         font-size: 1.15em;
     }
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 ol, ul{
     padding: 0;
     margin-bottom: 1.25rem;
     padding-left: 1.25rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 a{
     display: inline-block;
@@ -72,6 +78,14 @@ a{
     transition: .3s;
     &:hover, &:focus{
         outline: none;
+    }
+
+    &.link-inverse{
+        color: $link-hover-color;
+        text-decoration: underline;
+        &:hover, &:focus{
+            color: $link-color;
+        }
     }
 }
 

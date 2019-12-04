@@ -1,0 +1,104 @@
+.toggle{
+    padding: 20px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background: $white;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    .toggle__letter{
+        background: $border-color;
+        border-radius: 6px;
+
+        flex: 0 0 80px;
+        max-width: 80px;
+        height: 80px;
+
+        line-height: 80px;
+        text-align: center;
+
+        font-size: 76px;
+        font-weight: bold;
+        color: darken($border-color, 8);
+    }
+    .toggle__info{
+        flex: 0 0 calc(100% - 120px);
+        max-width: calc(100% - 120px);
+
+        padding-right: 36px;
+    }
+    .toggle__title{
+        font-weight: bold;
+        text-transform: uppercase;
+
+        & + .toggle__intro{
+            margin-top: 10px;
+        }
+    }
+    .toggle__content{
+        display: none;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        padding-top: 20px;
+        padding-left: 120px;
+    }
+
+    &_with-content{
+        position: relative;
+        cursor: pointer;
+
+        &:after{
+            content: '';
+            display: block;
+
+            width: 16px;
+            height: 16px;
+
+            position: absolute;
+            top: 52px;
+            right: 20px;
+
+            background: url("/img/arrow-next.svg") no-repeat center / 16px;
+
+            transition: .4s;
+        }
+        .toggle__title{
+            transition: .4s;
+        }
+        &:hover{
+            .toggle__title{
+                color: $red;
+            }
+        }
+    }
+
+    &--active{
+        &:after{
+            transform: rotate(90deg);
+        }
+    }
+
+    & + .toggle{
+        margin-top: 30px;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .toggle{
+        .toggle__letter{
+            display: none;
+        }   
+        .toggle__info{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .toggle__content{
+            padding-left: 0px;
+        }
+    }
+}
