@@ -40,6 +40,21 @@
     padding-left: 0;
     margin-bottom: 0;    
 }
+.list-check{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    .list-item{
+        padding: 14px;
+        padding-left: 54px;
+        border-radius: 6px;
+        background: $white url('../img/check-mark_red.svg') no-repeat 20px center / 14px;
+
+        & + .list-item{
+            margin-top: 20px;
+        }
+    }    
+}
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .list-group{

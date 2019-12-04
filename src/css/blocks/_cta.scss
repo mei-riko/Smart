@@ -22,6 +22,11 @@
         margin-top: 0;
         color: $white;
     }
+    .cta-block__offer{
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $grey;
+    }
     .cta-block__img{
         position: absolute;
         left: 0;
@@ -84,6 +89,28 @@
             border-bottom: 1px solid #462c58;
         }
     }
+
+    &_info{
+        background: $light-grey;
+        color: $violet;
+        border-radius: 6px;
+        padding: 40px;
+
+        .cta-block__offer{
+            margin-bottom: 10px;
+            & + .list-check{
+                margin-top: 20px;
+            }
+        }
+        .cta-block__title{
+            margin-bottom: 20px;
+            color: $violet;
+        }
+        .cta-block__col{
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
@@ -107,6 +134,17 @@
             }
             .cta-block__content{
                 margin-bottom: 0;
+            }
+        }
+        &_card{
+            .cta-block__btn{
+                padding-left: 0px;
+            }
+        }
+        &_info{
+            .cta-block__col{
+                flex: 0 0 100%;
+                max-width: 100%;
             }
         }
     }

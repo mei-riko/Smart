@@ -102,6 +102,9 @@ a{
 
 .img-border{
     border: 4px solid #655d6a;
+    &-light {
+        border: 4px solid #f6f6f6;
+    }
 }
 
 .breadcrumbs{

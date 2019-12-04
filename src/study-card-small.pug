@@ -1,0 +1,242 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Study Small Page
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            section.header-block.header-block_study
+                .container
+                    .row.align-items-center
+                        .col-6.col-md-12.col-lg-7
+                            h1.text-bold.header-block__title Пожарно-технический минимум без&nbsp;отрыва от&nbsp;работы
+                            ul.list
+                                li.list-item 100% гарантия результата
+                                li.list-item получение официальной лицензии
+                                li.list-item европейский уровень сервиса
+                                li.list-item персональный менеджер
+                            .header-block__rating.mt-60.mt-sm-30
+                                .title 4.7 из 5
+                                .offer 429 человек уже прошли обучение
+                        .col-6.col-lg-5.d-md-none
+                            //- img.img-fluid.clip-svg(src="/img/test-page.png")
+                            <svg viewbox="0 0 680 540" preserveAspectRatio="xMidYMid meet">
+                                <defs>
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_0">
+                                        <feOffset in="SourceAlpha" dx="0" dy="23" />
+                                        <feGaussianBlur result="blurOut" stdDeviation="0" />
+                                        <feFlood flood-color="rgb(242, 240, 244)" result="floodOut" />
+                                        <feComposite operator="atop" in="floodOut" in2="blurOut" />
+                                        <feComponentTransfer><feFuncA type="linear" slope="1"/></feComponentTransfer>
+                                        <feMerge>
+                                            <feMergeNode/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                    <pattern id="image" patternUnits="userSpaceOnUse" height="595" width="690">
+                                        <image x="0" y="-20" height="595" width="690" xlink:href="/img/test-page.png"></image>
+                                    </pattern>
+                                </defs>
+                                <g filter="url(#Filter_0)">
+                                
+                                    <path fill-rule="evenodd"  fill="url(#image)" d="M380.054,18.985 C356.575,33.051 343.816,60.226 320.556,74.698 C299.158,88.016 272.465,89.730 247.477,89.645 C196.881,89.471 138.054,68.976 122.866,133.072 C112.521,176.716 172.280,204.548 157.683,246.568 C153.129,259.694 138.967,269.403 127.338,277.594 C98.447,297.938 76.938,315.421 55.551,344.330 C15.504,398.427 12.662,423.629 26.664,457.693 C41.848,494.625 98.621,529.291 145.735,511.969 C202.254,491.198 196.904,476.862 259.789,453.909 C312.860,434.527 383.661,472.440 421.000,485.000 C508.270,514.358 607.281,512.484 659.000,310.999 C670.470,266.337 677.417,219.454 666.602,151.475 C659.000,103.687 604.456,107.727 582.553,115.498 C504.168,143.335 444.937,-19.888 380.054,18.985 Z"/>
+                                </g>
+                            </svg>
+            section
+                .container
+                    .cta-block.cta-block_card.mb-30
+                        p.cta-block__title.h3.text-bold Получите документы быстро и легко 
+                        .cta-block__row
+                            ul.list-clean
+                                li.list-item — удостоверение ПТМ на 1-3 года (с внесением в реестр)
+                                li.list-item — выписка из протокола
+                                li.list-item — сроки оформления удостоверения - 1 день
+                            .cta-block__price
+                                p.text-bold.h4 1500 руб.
+                                p.text-grey.mb-0 стоимость обучения
+                            .cta-block__btn
+                                a.btn.btn_cta.text-bold(data-fancybox="modal-1" data-src="#modalCall" href="javascript:;") Записаться на курс
+                    .cta-block.cta-block_info
+                        .cta-block__row
+                            .cta-block__col
+                                p.cta-block__offer Официальное название программы обучения
+                                p.cta-block__title.h3.text-bold  Пожарно-технический минимум для&nbsp;руководителей и&nbsp;ответственных
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение всех надзорных проверок. Все программы соответствуют.
+                            .cta-block__col
+                                p.cta-block__offer Программа подходит:
+                                ul.list-check
+                                    li.list-item для руководителей гостиниц
+                                    li.list-item для руководителей отелей
+                                    li.list-item для ответственных лиц в гостиницах
+                                    li.list-item для ответственных лиц в отелях
+            section.content
+                .container.mb-60
+                    .row.justify-content-center.mb-30
+                        .col-7.col-md-12
+                            p.h3.text-center.text-bold.mb-0 Популярные вопросы о «ПТМ»
+                    .row.justify-content-center
+                        .col-4.col-sm-12.col-lg-9.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Кому необходимо обучение?
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение всех надзорных проверок. Все программы соответствуют.
+                        .col-4.col-sm-12.col-lg-9.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Штрафы за&nbsp;отсутствие удостоверения
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение проверок. Все программы соответствуют госстандартам.
+                        .col-4.col-sm-12.col-lg-9.d-flex
+                            .item-block.item-block_faq
+                                p.text-bold.h6 Какая зарплата вас ждет?
+                                p.mb-0 Мы осуществляем деятельнось на основе выданных лицензий, поэтому можем гарантировать прохождение всех проверок.
+                .container
+                    p.h2.text-center.text-bold.mb-30 Форматы обучения
+                    .row.justify-content-center
+                        .col-5.col-sm-12.col-md-10.col-lg-6.d-flex
+                            .post.post_type-study
+                                .post__title.post__title_priority
+                                    p.text-bold.mb-0 Дистанционное обучение
+                                    a.btn.btn_cta(data-fancybox="modal-2" data-src="#modalCall" href="javascript:;") Записаться
+                                .post__offer
+                                    p Обучение проходит на образовательной платформе, доступной из любой точки России. 
+                                        | Вам будут выслан логин и пароль. Необходимо будет ознакомиться с теоритической 
+                                        | частью и пройти тестирование. 
+                                    p.post__price.h4.text-bold.mb-0 1500 руб.
+                        .col-5.col-sm-12.col-md-10.col-lg-6.d-flex.mt-md-30
+                            .post.post_type-study
+                                .post__title.post__title_default
+                                    p.text-bold.mb-0 Очное обучение
+                                    a.btn.btn_cta(data-fancybox="modal-3" data-src="#modalCall" href="javascript:;") Записаться
+                                .post__offer 
+                                    p Обучение проходит на образовательной платформе, доступной из любой точки России. 
+                                        | Вам будут выслан логин и пароль. Необходимо будет ознакомиться с теоритической 
+                                        | частью и пройти тестирование. 
+                                    p.post__price.h4.text-bold.mb-0 2500 руб.
+            section.content.content_bg-grey
+                .container
+                    .row.align-items-center.justify-content-center
+                        .col-5.col-sm-12.col-md-9.col-lg-7.col-xl-6.mt-sm-30.text-sm-center.p-relative.text-center
+                            p.h4.text-bold Даём 100% гарантию
+                            p Мы осуществляем деятельнось на&nbsp;основе выданных лицензий, поэтому можем гарантировать  
+                                | прохождение всех надзорных проверок.
+                            p.mb-0 Все программы соответствуют госстандартам. По&nbsp;заверешнию обучения все данные 
+                                | заносятся в&nbsp;Реестр. 
+                            svg.element.element_ellips(viewbox="0 0 250 250" preserveAspectRatio="xMinYMid meet")
+                                defs
+                                    linearGradient(id="PSgrad_0" x1="0%" x2="70.711%" y1="0%" y2="70.711%")
+                                        stop(offset="0%" stop-color="rgb(0,204,255)" stop-opacity="1")
+                                        stop(offset="100%" stop-color="rgb(33,223,172)" stop-opacity="0")
+                                path(fill-rule="evenodd"  fill="rgb(33, 223, 172)" d="M125.000,-0.000 C194.036,-0.000 250.000,55.964 250.000,125.000 C250.000,194.035 194.036,250.000 125.000,250.000 C55.964,250.000 -0.000,194.035 -0.000,125.000 C-0.000,55.964 55.964,-0.000 125.000,-0.000 Z")
+                                path(fill="url(#PSgrad_0)" d="M125.000,-0.000 C194.036,-0.000 250.000,55.964 250.000,125.000 C250.000,194.035 194.036,250.000 125.000,250.000 C55.964,250.000 -0.000,194.035 -0.000,125.000 C-0.000,55.964 55.964,-0.000 125.000,-0.000 Z")                .container
+                            svg.element.element_square(viewbox="0 0 125 125" preserveAspectRatio="xMinYMid meet")
+                                defs
+                                    linearGradient(id="PSgrad_2" x1="64.279%" x2="0%" y1="76.604%" y2="0%")
+                                        stop(offset="0%" stop-color="rgb(239,8,57)" stop-opacity="1")
+                                        stop(offset="100%" stop-color="rgb(239,8,122)" stop-opacity="0")
+                                path(fill-rule="evenodd"  fill="rgb(239, 8, 30)" d="M-0.000,-0.000 L125.000,-0.000 L125.000,125.000 L-0.000,125.000 L-0.000,-0.000 Z")
+                                path(fill="url(#PSgrad_2)" d="M-0.000,-0.000 L125.000,-0.000 L125.000,125.000 L-0.000,125.000 L-0.000,-0.000 Z")
+            section.content.p-90.p-sm-40
+                .container
+                    p.h1.text-center.text-bold.mb-60.mb-sm-30 Всего 3 простых шага до Вашей цели
+                    .row.justify-content-center.mb-60.mb-sm-30
+                        .col-10.col-lg-12.item-row.item-row_inverse.item-row_col-4
+                            .item.item_work-step.text-center
+                                p.item__number 1
+                                p.item__title.text-bold Подача заявки
+                                p.item__content.text-small Помощь с&nbsp;оформлением резюме и&nbsp;полный доступ к&nbsp;базе вакансий
+                            .item.item_work-step.text-center
+                                p.item__number 2
+                                p.item__title.text-bold Договор и доступ
+                                p.item__content.text-small Официальный договор, на&nbsp;основе которого предоставляется доступ к&nbsp;курсу
+                            .item.item_work-step.text-center
+                                p.item__number 3
+                                p.item__title.text-bold Курс и тест
+                                p.item__content.text-small Задания с&nbsp;проверкой и&nbsp;обратной связью от&nbsp;преподавателей и&nbsp;экспертов курса
+                            .item.item_work-step.text-center
+                                p.item__number.text-small 
+                                    svg.icon-check(x="0px" y="0px" viewBox="0 0 45.701 45.7")
+                                        path(fill="#000" d="M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z")
+                                p.item__title.text-bold Получите документы
+                                p.item__content.text-small По прохождении обучения вы получите удостоверение и&nbsp;протокол
+                    .row.justify-content-center
+                        .col-6
+                            img.mr-0.img-fluid.img-border-light(src="/img/doc-1.png", alt="")
+                        .col-6
+                            img.ml-0.img-fluid.img-border-light(src="/img/doc-2.png", alt="")
+            section.content.pt-30.pb-30.content_bg-grey
+                .container
+                    p.text-bold Часто ищут:
+                    ul.filter-row
+                        li.filter-item тест
+                        li.filter-item тест
+                        li.filter-item тест
+                        li.filter-item тест
+                        li.filter-item тест
+                        li.filter-item тест
+            .modal.modal_call#modalCall
+                p.h4.text-bold.mb-30 Наш менеджер свяжется с&nbsp;вами
+                form.form(action="")
+                    .form__group
+                        input.form__input(placeholder="Ваше имя" type="text")
+                        input.form__input.phone(placeholder="Телефон" type="tel")
+                        a.btn.btn_cta(href="#") Отправить заявку
+                    .form__agree.checkbox
+                        input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                        label.checkbox__label(for="agree") согласен с 
+                            a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
+            .modal.modal_poll#modalOut
+                .modal__title
+                    p.h4.text-uppercase.mb-30.text-sm-center.text-bold ГОРЯЩЕЕ ПРЕДЛОЖЕНИЕ ОТ ЦЕНТРА ОБУЧЕНИЯ SMART
+                    .row.no-gutters
+                        .col-6.col-sm-12.text-sm-center
+                            p.mb-0.mb-sm-30 Получи промокод на скидку в 15% на оплату любой программы
+                        .col-6.col-sm-12.text-center
+                            .h1.text-bold.timer#timer
+                .modal__content.poll
+                    p.text-small.mb-30 Промокод выдается единовременно при отправлении заявки 
+                        | с формы и действует с момента выдачи 3 месяца.
+                    form.form.form_inline(action="")
+                        .poll__row.row.no-gutters#pollRow
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm1(type="checkbox" name="programm1" data-value="test" value="test")
+                                    label.checkbox__label(for="programm1") 
+                                        span.poll__name ПТМ
+                                        input.poll__input#programmInput1(data-id="#programm1" type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm2(type="checkbox" name="programm2")
+                                    label.checkbox__label(for="programm2") 
+                                        span.poll__name Охрана труда
+                                        input.poll__input#programmInput2(type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm3(type="checkbox" name="programm3")
+                                    label.checkbox__label(for="programm3") 
+                                        span.poll__name Повышение квалификации
+                                        input.poll__input#programmInput3(type="number" min="0" max="100" value="1")
+                            .col-6.col-sm-12.mb-20
+                                .checkbox.checkbox_large
+                                    input.checkbox__input#programm4(type="checkbox" name="programm4")
+                                    label.checkbox__label(for="programm4") 
+                                        span.poll__name Первая помощь
+                                        input.poll__input#programmInput4(type="number" min="0" max="100" value="1")
+                        .form__group
+                            input.form__input.phone(placeholder="Телефон" type="tel")
+                            a.btn.btn_cta(href="#") Отправить
+                        .form__agree.checkbox
+                            input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                            label.checkbox__label(for="agree") согласен с 
+                                a.checkbox__link(href="/policy.pdf" target="_blank") обработкой персональных данных
+        include chunks/footer.pug
+        script(src="./js/jquery.fancybox.min.js")
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js") 
