@@ -88,6 +88,17 @@
             margin-bottom: 1.5rem;
             border-bottom: 1px solid #462c58;
         }
+        .cta-block__offer{
+            color: #838086;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .cta-block__row + .cta-block__row{
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #462c58;
+        }
     }
 
     &_info{
