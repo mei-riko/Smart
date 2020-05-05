@@ -3,8 +3,9 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
+        title News
 
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet")
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         link(href='./css/slick.css', rel='stylesheet')
         link(href='./css/slick-theme.css', rel='stylesheet')
@@ -12,70 +13,69 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .content-area
-            include chunks/header.pug
-            main.inside
-                section.header-block.header-block_title.header-block_bg-white
-                    .container
-                        h1.header-block__title Новости учебного центра
-                section.content.content_bg-grey
-                    .container
-                        .row
-                            .col-9.col-lg-12
-                                .tags
-                                    a.tags__item.tags__item--active(href="#") все публикации
-                                    a.tags__item(href="#") новости центра
-                                    a.tags__item(href="#") полезная информация
-                                .news-item.mt-30
-                                    a.news-item__title(href="#") Утверждение порядка профилактических обследований на опасных производственных объектах
-                                    p.news-item__offer All of the world's 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company's entire purchased shares of stock. While these companies have their roots in the U.S. and are the embodiment of ...
-                                    .news-item__footer.row.no-gutters
-                                        .col-6.col-sm-12
-                                            span.news-item__data 23 ноября 2019
-                                            span.news-item__tags новости центра
-                                        .col-6.text-right.text-sm-left.col-sm-12.mt-sm-30
-                                            <div class="ya-share2" data-title="Утверждение порядка профилактических обследований" data-url="https://yandex.ru/dev/share/doc/dg/add-docpage/" data-services="collections,vkontakte,facebook,telegram"></div>
-                                .news-item.mt-30
-                                    a.news-item__title(href="#") Утверждение порядка профилактических обследований на опасных производственных объектах
-                                    img.img-fluid.news-item__image(src="../img/pic.png")
-                                    p.news-item__offer All of the world's 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company's entire purchased shares of stock. While these companies have their roots in the U.S. and are the embodiment of ...
-                                    .news-item__footer.row.no-gutters
-                                        .col-6
-                                            span.news-item__data 23 ноября 2019
-                                            span.news-item__tags новости центра
-                                        .col-6.text-right
-                                            <div class="ya-share2" data-title="Утверждение порядка профилактических обследований" data-url="https://yandex.ru/dev/share/doc/dg/add-docpage/" data-services="collections,vkontakte,facebook,telegram"></div>
-                                ul.pagination
-                                    li.pagination__item
-                                        a.pagination__link.pagination__link--active(href="#") 1
-                                    li.pagination__item
-                                        a.pagination__link(href="#") 2
-                                    li.pagination__item
-                                        a.pagination__link(href="#") 3
-                            .col-3.col-lg-12.sidebar.mt-lg-30
-                                p.sidebar__label Направления обучения
-                                ul.list.list_circle
-                                    li.list-item 
-                                        a(href="#") Повышение квалификации
-                                    li.list-item 
-                                        a(href="#") Профпереподготовка
-                                    li.list-item 
-                                        a(href="#") Первая помощь
-                                    li.list-item 
-                                        a(href="#") Рабочие специальности
-                                    li.list-item 
-                                        a(href="#") Охрана труда
-                                    li.list-item 
-                                        a(href="#") Целевое обучение
-                                    li.list-item 
-                                        a(href="#") Электробезопасность
-                                    li.list-item 
-                                        a(href="#") Промышленная безопасность
-                                    li.list-item 
-                                        a(href="#") Охрана труда на высоте
-                                    li.list-item 
-                                        a(href="#") Пожарно-технический минимум
-            include chunks/footer.pug
+        include chunks/header.pug
+        main.inside
+            section.header-block.header-block_title.header-block_bg-white
+                .container
+                    h1.header-block__title Новости учебного центра
+            section.content.content_bg-grey
+                .container
+                    .row
+                        .col-9.col-lg-12
+                            .tags
+                                a.tags__item.tags__item--active(href="#") все публикации
+                                a.tags__item(href="#") новости центра
+                                a.tags__item(href="#") полезная информация
+                            .news-item.mt-30
+                                a.news-item__title(href="#") Утверждение порядка профилактических обследований на опасных производственных объектах
+                                p.news-item__offer All of the world's 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company's entire purchased shares of stock. While these companies have their roots in the U.S. and are the embodiment of ...
+                                .news-item__footer.row.no-gutters
+                                    .col-6.col-sm-12
+                                        span.news-item__data 23 ноября 2019
+                                        span.news-item__tags новости центра
+                                    .col-6.text-right.text-sm-left.col-sm-12.mt-sm-30
+                                        <div class="ya-share2" data-title="Утверждение порядка профилактических обследований" data-url="https://yandex.ru/dev/share/doc/dg/add-docpage/" data-services="collections,vkontakte,facebook,telegram"></div>
+                            .news-item.mt-30
+                                a.news-item__title(href="#") Утверждение порядка профилактических обследований на опасных производственных объектах
+                                img.img-fluid.news-item__image(src="../img/pic.png")
+                                p.news-item__offer All of the world's 10 largest companies as measured by market capitalization are American. Market capitalization is the total value of a company's entire purchased shares of stock. While these companies have their roots in the U.S. and are the embodiment of ...
+                                .news-item__footer.row.no-gutters
+                                    .col-6
+                                        span.news-item__data 23 ноября 2019
+                                        span.news-item__tags новости центра
+                                    .col-6.text-right
+                                        <div class="ya-share2" data-title="Утверждение порядка профилактических обследований" data-url="https://yandex.ru/dev/share/doc/dg/add-docpage/" data-services="collections,vkontakte,facebook,telegram"></div>
+                            ul.pagination
+                                li.pagination__item
+                                    a.pagination__link.pagination__link--active(href="#") 1
+                                li.pagination__item
+                                    a.pagination__link(href="#") 2
+                                li.pagination__item
+                                    a.pagination__link(href="#") 3
+                        .col-3.col-lg-12.sidebar.mt-lg-30
+                            p.sidebar__label Направления обучения
+                            ul.list.list_circle
+                                li.list-item 
+                                    a(href="#") Повышение квалификации
+                                li.list-item 
+                                    a(href="#") Профпереподготовка
+                                li.list-item 
+                                    a(href="#") Первая помощь
+                                li.list-item 
+                                    a(href="#") Рабочие специальности
+                                li.list-item 
+                                    a(href="#") Охрана труда
+                                li.list-item 
+                                    a(href="#") Целевое обучение
+                                li.list-item 
+                                    a(href="#") Электробезопасность
+                                li.list-item 
+                                    a(href="#") Промышленная безопасность
+                                li.list-item 
+                                    a(href="#") Охрана труда на высоте
+                                li.list-item 
+                                    a(href="#") Пожарно-технический минимум
+        include chunks/footer.pug
         script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
         script(src="https://yastatic.net/share2/share.js")
         script(src="./js/jquery.inputmask.js")

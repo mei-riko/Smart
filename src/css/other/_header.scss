@@ -1,27 +1,17 @@
 .header{
-    &_sticky{
-        position: sticky;
-        top: 0;
-        background: $white;
-        z-index: 101;
-    }
-    &__additional{
-        position: relative;
-        z-index: 1;
-        background: $light-grey;
-        letter-spacing: 1px;
-        color: $dark-grey;
-
-        padding: 10px 0;
-    }
-    &__main{
-        padding: 20px 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .logo{
+    font-family: "Gilroy";
+    
+    .header__logo{
         width: 230px;
         height: 32px;
     }
+
+    .nav{
+        &_mobile{
+            display: none;
+        }
+    }
+    
     .header__contact{
         display: flex;
         flex-wrap: wrap;
@@ -64,15 +54,32 @@
     .header__nav{
         display: none;
     }
-    .nav{
-        &_mobile{
-            display: none;
-        }
+    
+    &__additional{
+        position: relative;
+        z-index: 1;
+        background: $light-grey;
+        letter-spacing: 1px;
+        color: $dark-grey;
+
+        padding: 10px 0;
     }
+    &__main{
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &_sticky{
+        position: sticky;
+        top: 0;
+        background: $white;
+        z-index: 101;
+    }
+    
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .header{
-        .logo{
+        .header__logo{
             .path-offer{
                 display: none;
             }
@@ -95,7 +102,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .header{
-        .logo{
+        .header__logo{
             width: 190px;
             &-col{
                 overflow: hidden;
@@ -196,7 +203,7 @@
                 padding: 0 20px;
             }
         }
-        .logo{
+        .header__logo{
             .path-offer{
                 display: none;
             }

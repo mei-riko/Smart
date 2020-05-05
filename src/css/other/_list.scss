@@ -38,6 +38,11 @@
 
     .list{
         padding: 0 20px;
+
+        & + .list-clean,
+        & + .list{
+            margin-top: 0;
+        }
     }
 }
 .list-clean{
@@ -71,6 +76,7 @@
         flex-wrap: wrap;
         .list{
             padding: 0;
+            & + .list-clean,
             & + .list{
                 margin-top: .5rem;
             }

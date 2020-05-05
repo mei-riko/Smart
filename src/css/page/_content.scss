@@ -8,6 +8,20 @@
     &.pb-30{padding-bottom: 30px;}
     &.pb-0{padding-bottom: 0px;}
     &.p-90{padding: 90px 0;}
+    
+    /* Elements */
+    .content__title{
+        margin-bottom: 60px;
+        &.mb-30{
+            margin-bottom: 30px;            
+        }
+    }
+    .content__offer{
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     /* Background & Border */
     &_bg-grey{
         background: $light-grey;
@@ -26,17 +40,25 @@
             }
         }
     }
-    /* Elements */
-    .content__title{
-        margin-bottom: 60px;
-        &.mb-30{
-            margin-bottom: 30px;            
+
+    /* For text page*/
+    &_text-page{
+        a{
+            text-decoration: underline;
         }
-    }
-    .content__offer{
-        width: 600px;
-        max-width: 100%;
-        margin: 0 auto;
+        ol {
+            li + li{
+                margin-top: .5rem;
+            }
+        }
+        ul {
+            li + li{
+                margin-top: .5rem;
+            }
+        }
+        img{
+            @extend .img-fluid;
+        }
     }
 }
 .element{

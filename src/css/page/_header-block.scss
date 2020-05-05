@@ -8,6 +8,12 @@
         max-width: 100%;
         margin: 0 auto 30px;
     }
+    &__offer{
+        @extend .lead;
+        max-width: 100%;
+        width: 720px;
+        margin: 0 auto;
+    }
     &__content{
         margin-bottom: 30px;
         &.icon-block{
@@ -31,7 +37,17 @@
             color: $grey;
         }
     }
-
+    .list{
+        &-item{
+            &:before{
+                background: $black;
+            }
+        }
+    }
+    .clip-svg{
+        clip-path: url(#myClip);
+    }
+    /* Background */
     &_bg-white{
         background: $white;
     }
@@ -66,16 +82,6 @@
     /* For text page */
     &_inside{
         padding: 60px 0;
-    }
-    .list{
-        &-item{
-            &:before{
-                background: $black;
-            }
-        }
-    }
-    .clip-svg{
-        clip-path: url(#myClip);
     }
     /* For Section Page */
     &_title{

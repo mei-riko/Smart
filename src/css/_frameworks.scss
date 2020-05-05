@@ -22,6 +22,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 html,body {
     font-size: 14px;
     line-height: 1.5;
@@ -35,23 +36,25 @@ html,body {
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: "Gilroy";
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: 1.5rem;
+    margin-top: 3.5rem;
 }
 .h1,h1{font-size: 2.75rem;}
-.h2,h2{font-size: 2.5rem;}
-.h3,h3{font-size: 2rem;}
-.h4,h4{font-size: 1.75rem;}
-.h5,h5{font-size: 1.5rem;}
-.h6,h6{font-size: 1.25rem;}
+.h2,h2{font-size: 2.25rem;}
+.h3,h3{font-size: 1.75rem;}
+.h4,h4{font-size: 1.5rem;}
+.h5,h5{font-size: 1.25rem;}
+.h6,h6{font-size: 1rem;}
 
 p {
     font-size: 1rem;
+    line-height: 1.6;
     margin-top: 0;
     margin-bottom: 1.25rem;
     &.small{
@@ -76,8 +79,13 @@ a{
     display: inline-block;
     outline: none;
     transition: .3s;
+
     &:hover, &:focus{
         outline: none;
+    }
+
+    &.link{
+        text-decoration: underline;
     }
 
     &.link-inverse{
@@ -94,6 +102,7 @@ a{
 
 .d-flex{display: flex;}
 .d-none{display: none;}
+.d-block{display: block;}
 
 .text-white{color: $white;}
 .text-black{color: $black;}
@@ -101,6 +110,7 @@ a{
 .text-light-grey{color: $light-grey;}
 
 .text-uppercase{text-transform: uppercase;}
+.text-light{font-weight: 300;}
 .text-bold,strong,b{font-weight: 700;}
 .text-small,small,.small{font-size: 12px; line-height: 16px;}
 

@@ -5,9 +5,7 @@
     background: $white;
 
     .news-item__title{
-        font-size: 2rem;
-        line-height: 1.2;
-        margin-bottom: 20px;
+        @extend .h3;
 
         &:hover{
             text-decoration: none;
@@ -44,6 +42,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -8px;
+
+    font-family: "Gilroy";
 
     .tags__item{
         padding: 2px 8px 4px;

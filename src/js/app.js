@@ -1,8 +1,11 @@
 import $ from 'jquery'
 $(document).ready(() =>{
+
+    $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+
     $("a.scroll").click(function() {
         $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
+            scrollTop: $($(this).attr("href")).offset().top - 120 + "px"
         }, {
             duration: 500,
             easing: "swing"
