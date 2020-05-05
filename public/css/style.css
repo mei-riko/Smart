@@ -2724,8 +2724,8 @@ a.link-inverse:hover, a.link-inverse:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -2867,6 +2867,13 @@ a.link-inverse:hover, a.link-inverse:focus {
   -ms-flex: 0 0 45%;
   flex: 0 0 45%;
   max-width: 45%;
+}
+
+.cta-block_info .cta-block__col_full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 @media all and (max-width: 992px) {
