@@ -1786,6 +1786,10 @@ a.link-inverse:hover, a.link-inverse:focus {
   outline: none;
 }
 
+.form__input.error {
+  border-color: #ef081e;
+}
+
 .form__input + .form__input {
   margin-top: 15px;
 }

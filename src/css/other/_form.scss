@@ -8,6 +8,10 @@
         border-radius: 4px;
         outline: none;
 
+        &.error{
+            border-color: $red;
+        }
+
         & + .form__input{
             margin-top: 15px;
         }

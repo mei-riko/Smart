@@ -1,8 +1,9 @@
 import $ from 'jquery'
 $(document).ready(() =>{
-
-    $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
-
+    if ( $('.preloader') .length > 0 ){
+        // $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+        $('.preloader').delay(400).fadeOut();
+    }
     $("a.scroll").click(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top - 120 + "px"
@@ -12,24 +13,23 @@ $(document).ready(() =>{
         });
         return false;
     });
-  
     // Input mask
     if( $('.phone').length > 0 ) {
-      $(".phone").inputmask({
-        mask: "8 999 999 99 99",
-        placeholder: " ",
-        showMaskOnHover: true,
-        onincomplete: function(){ 
-          $(this).closest("form").addClass('error-phone'); 
-          $(this).addClass('error'); 
-          $(this).siblings(".error_phone").addClass('error').html('Укажите корректный номер'); 
-        }, 
-        oncomplete: function(){ 
-            $(this).closest("form").removeClass('error-phone'); 
-            $(this).removeClass('error'); 
-            $(this).siblings(".error_phone").removeClass('error').html(''); 
-        },
-      })
+        $(".phone").inputmask({
+            mask: "8 999 999 99 99",
+            placeholder: " ",
+            showMaskOnHover: true,
+            onincomplete: function(){ 
+                $(this).closest("form").addClass('error-phone'); 
+                $(this).addClass('error'); 
+                $(this).siblings(".error_phone").addClass('error').html('Укажите корректный номер'); 
+            }, 
+            oncomplete: function(){ 
+                $(this).closest("form").removeClass('error-phone'); 
+                $(this).removeClass('error'); 
+                $(this).siblings(".error_phone").removeClass('error').html(''); 
+            },
+        })
     }
     $('input.phone').on('keydown', function(event) {
         if (event.keyCode === 13 && !$(this).inputmask("isComplete") ) {
@@ -38,12 +38,12 @@ $(document).ready(() =>{
             return false;
         }
     });
-
+        
     // Slider
     if( $('.slider_license').length > 0 ){
         let $status = $('.slider-numeric');
         let $slickElementIndex = $('.slider_license#index-slider');
-    
+
         $slickElementIndex.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
             var i = (currentSlide ? currentSlide : 0) + 1;
@@ -62,12 +62,12 @@ $(document).ready(() =>{
             arrows: false,
             responsive: [
                 {
-                  breakpoint: 576,
-                  settings: {
+                    breakpoint: 576,
+                    settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                  }
+                    }
                 }
             ]
         });
@@ -96,7 +96,7 @@ $(document).ready(() =>{
             $( href ).slideUp();
         }
     });
-   
+
     // Navbar Mobile
     $(".header__nav#mobile-nav").on("click", function(e){
         $(".header .nav.nav_mobile").slideToggle();
@@ -122,11 +122,11 @@ $(document).ready(() =>{
     });
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
-		let dropdownNavActive = $(".nav__item_has-child .nav__link.nav__link--active"); // пункт меню
-		let dropdownActive = $(".nav__dropdown.nav__dropdown--active"); // элемент
+        let dropdownNavActive = $(".nav__item_has-child .nav__link.nav__link--active"); // пункт меню
+        let dropdownActive = $(".nav__dropdown.nav__dropdown--active"); // элемент
         let mobileActive = $(".header .nav.nav_mobile");
         
-		if (!dropdownActive.is(e.target) // клик был не по блоку
+        if (!dropdownActive.is(e.target) // клик был не по блоку
             && !dropdownNavActive.is(e.target) // и не по активному пункту меню
             && dropdownActive.has(e.target).length === 0) { // и не по его дочерним элементам
                 $(".nav__item_has-child .nav__link.nav__link--active").removeClass("nav__link--active");
@@ -136,7 +136,7 @@ $(document).ready(() =>{
         
         if (!mobileActive.is(e.target) && mobileActive.has(e.target).length === 0 && !$(".header__nav#mobile-nav").is(e.target)) {
             mobileActive.slideUp();
-		}
+        }
     });
     // Hide Navigation on Desktop
     $(window).resize(function(){
@@ -182,7 +182,7 @@ $(document).ready(() =>{
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
-      
+        
     // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
     var alertwin2 = getCookie("alertwin2");
     if ( alertwin2 != "no" && $(window).width() > 991 ) {
